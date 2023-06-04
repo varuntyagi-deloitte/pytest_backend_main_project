@@ -1,0 +1,3 @@
+[32mINFO    [0m test_009_delete_api_logout_user_account:test_002_notes_api.py:122 delete /users/logout api testing started to logout a user
+[32mINFO    [0m test_009_delete_api_logout_user_account:test_002_notes_api.py:127 Status Code asserted successfully
+[32mINFO    [0m test_009_delete_api_logout_user_account:test_002_notes_api.py:130 Success Message asserted successfully

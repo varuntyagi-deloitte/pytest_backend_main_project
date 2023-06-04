@@ -1,0 +1,4 @@
+[32mINFO    [0m test_005_post_api_users_login:test_001_users_api.py:69 post /users/login api testing started
+[32mINFO    [0m test_005_post_api_users_login:test_001_users_api.py:72 Status Code asserted successfully
+[32mINFO    [0m test_005_post_api_users_login:test_001_users_api.py:76 Success Message asserted successfully
+[32mINFO    [0m test_005_post_api_users_login:test_001_users_api.py:80 Response data asserted successfully

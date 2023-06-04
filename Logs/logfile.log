@@ -1,0 +1,956 @@
+2023-06-05 01:19:45,495 : INFO : test_001_get_api_health_check : get /health-check api testing started
+2023-06-05 01:19:46,382 : INFO : test_001_get_api_health_check : Status Code asserted successfully
+2023-06-05 01:19:46,382 : INFO : test_001_get_api_health_check : Response data
+2023-06-05 01:19:46,396 : INFO : test_001_get_api_health_check : Success Message asserted successfully
+2023-06-05 01:19:46,415 : INFO : test_002_get_api_health_check_negative : get /health-check api testing started for wrong api endpoint
+2023-06-05 01:19:46,889 : INFO : test_002_get_api_health_check_negative : Status Code asserted successfully
+2023-06-05 01:19:46,889 : INFO : test_002_get_api_health_check_negative : Success Message asserted successfully
+2023-06-05 01:19:46,910 : INFO : test_003_post_api_register_users : post /users/register api testing started
+2023-06-05 01:19:47,531 : INFO : test_004_post_api_register_users_negative : post /users/register api testing started for registered user
+2023-06-05 01:19:47,996 : INFO : test_004_post_api_register_users_negative : Status Code asserted successfully
+2023-06-05 01:19:47,996 : INFO : test_004_post_api_register_users_negative : Success Message asserted successfully
+2023-06-05 01:19:48,014 : INFO : test_005_post_api_users_login : post /users/login api testing started
+2023-06-05 01:19:48,741 : INFO : test_005_post_api_users_login : Status Code asserted successfully
+2023-06-05 01:19:48,785 : INFO : test_005_post_api_users_login : Success Message asserted successfully
+2023-06-05 01:19:48,827 : INFO : test_005_post_api_users_login : Response data asserted successfully
+2023-06-05 01:19:48,847 : INFO : test_006_post_api_users_login_negative : post /users/login api testing started for invalid email and password
+2023-06-05 01:19:49,257 : INFO : test_006_post_api_users_login_negative : Status Code asserted successfully
+2023-06-05 01:19:49,257 : INFO : test_006_post_api_users_login_negative : Success Message asserted successfully
+2023-06-05 01:19:49,276 : INFO : test_007_get_api_users_profile : get /users/profile api testing started
+2023-06-05 01:19:49,803 : INFO : test_007_get_api_users_profile : Status Code asserted successfully
+2023-06-05 01:19:49,803 : INFO : test_007_get_api_users_profile : Success Message asserted successfully
+2023-06-05 01:19:49,846 : INFO : test_007_get_api_users_profile : Response data asserted successfully
+2023-06-05 01:19:49,865 : INFO : test_008_patch_api_users_profile : patch /users/profile api testing started
+2023-06-05 01:19:50,531 : INFO : test_008_patch_api_users_profile : Status Code asserted successfully
+2023-06-05 01:19:50,532 : INFO : test_008_patch_api_users_profile : Success Message asserted successfully
+2023-06-05 01:19:50,630 : INFO : test_009_post_api_users_forgot_password : post /users/forgot-password api testing started
+2023-06-05 01:19:51,556 : INFO : test_009_post_api_users_forgot_password : Status Code asserted successfully
+2023-06-05 01:19:51,576 : INFO : test_009_post_api_users_forgot_password : Success Message asserted successfully
+2023-06-05 01:19:51,599 : INFO : test_010_post_api_users : post /users/change-password api testing started
+2023-06-05 01:19:52,451 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 01:19:53,094 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 01:19:53,094 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 01:19:53,138 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 01:19:53,138 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 01:19:53,770 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 01:19:53,770 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 01:19:53,770 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 01:19:53,770 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 01:19:53,814 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 01:19:53,814 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 01:19:53,814 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 01:19:54,429 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 01:19:54,429 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 01:19:54,429 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 01:19:54,430 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 01:19:54,430 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 01:19:54,430 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 01:19:54,512 : INFO : test_004_get_api_get_notes : get /notes api testing started to get all the notes
+2023-06-05 01:19:55,052 : INFO : test_004_get_api_get_notes : Status Code asserted successfully
+2023-06-05 01:19:55,083 : INFO : test_005_get_api_get_note_by_id : get /notes/id api testing started to get a note by id
+2023-06-05 01:19:55,595 : INFO : test_005_get_api_get_note_by_id : Status Code asserted successfully
+2023-06-05 01:19:55,595 : INFO : test_005_get_api_get_note_by_id : Success Message asserted successfully
+2023-06-05 01:19:55,628 : INFO : test_005_get_api_get_note_by_id : Response data asserted successfully
+2023-06-05 01:19:55,649 : INFO : test_006_put_api_edit_notes : put /notes/id api testing started to update a note by id
+2023-06-05 01:19:55,742 : INFO : test_007_patch_api_users : patch /notes/id api testing started to update the completed status of a note
+2023-06-05 01:19:56,323 : INFO : test_007_patch_api_users : Status Code asserted successfully
+2023-06-05 01:19:56,323 : INFO : test_007_patch_api_users : Success Message asserted successfully
+2023-06-05 01:19:56,324 : INFO : test_007_patch_api_users : Response data asserted successfully
+2023-06-05 01:19:56,343 : INFO : test_008_delete_api_users : delete /notes/id api testing started to delete a note by id
+2023-06-05 01:19:56,963 : INFO : test_008_delete_api_users : Status Code asserted successfully
+2023-06-05 01:19:56,963 : INFO : test_008_delete_api_users : Success Message asserted successfully
+2023-06-05 01:19:56,982 : INFO : test_009_delete_api_logout_user_account : delete /users/logout api testing started to logout a user
+2023-06-05 01:19:57,588 : INFO : test_009_delete_api_logout_user_account : Status Code asserted successfully
+2023-06-05 01:19:57,588 : INFO : test_009_delete_api_logout_user_account : Success Message asserted successfully
+2023-06-05 01:19:58,352 : INFO : test_011_delete_api_delete_user_account : delete /users/delete-account api testing started to delete a user
+2023-06-05 01:19:59,129 : INFO : test_011_delete_api_delete_user_account : Status Code asserted successfully
+2023-06-05 01:19:59,129 : INFO : test_011_delete_api_delete_user_account : Success Message asserted successfully
+2023-06-05 01:20:59,878 : INFO : test_001_get_api_health_check : get /health-check api testing started
+2023-06-05 01:21:00,379 : INFO : test_001_get_api_health_check : Status Code asserted successfully
+2023-06-05 01:21:00,379 : INFO : test_001_get_api_health_check : Response data
+2023-06-05 01:21:00,394 : INFO : test_001_get_api_health_check : Success Message asserted successfully
+2023-06-05 01:21:00,414 : INFO : test_002_get_api_health_check_negative : get /health-check api testing started for wrong api endpoint
+2023-06-05 01:21:00,760 : INFO : test_002_get_api_health_check_negative : Status Code asserted successfully
+2023-06-05 01:21:00,760 : INFO : test_002_get_api_health_check_negative : Success Message asserted successfully
+2023-06-05 01:21:00,780 : INFO : test_003_post_api_register_users : post /users/register api testing started
+2023-06-05 01:21:01,462 : INFO : test_003_post_api_register_users : Status Code asserted successfully
+2023-06-05 01:21:01,463 : INFO : test_003_post_api_register_users : Success Message asserted successfully
+2023-06-05 01:21:01,541 : INFO : test_003_post_api_register_users : Response data asserted successfully
+2023-06-05 01:21:01,561 : INFO : test_004_post_api_register_users_negative : post /users/register api testing started for registered user
+2023-06-05 01:21:02,030 : INFO : test_004_post_api_register_users_negative : Status Code asserted successfully
+2023-06-05 01:21:02,031 : INFO : test_004_post_api_register_users_negative : Success Message asserted successfully
+2023-06-05 01:21:02,052 : INFO : test_005_post_api_users_login : post /users/login api testing started
+2023-06-05 01:21:02,897 : INFO : test_005_post_api_users_login : Status Code asserted successfully
+2023-06-05 01:21:02,938 : INFO : test_005_post_api_users_login : Success Message asserted successfully
+2023-06-05 01:21:02,981 : INFO : test_005_post_api_users_login : Response data asserted successfully
+2023-06-05 01:21:03,000 : INFO : test_006_post_api_users_login_negative : post /users/login api testing started for invalid email and password
+2023-06-05 01:21:03,473 : INFO : test_006_post_api_users_login_negative : Status Code asserted successfully
+2023-06-05 01:21:03,474 : INFO : test_006_post_api_users_login_negative : Success Message asserted successfully
+2023-06-05 01:21:03,493 : INFO : test_007_get_api_users_profile : get /users/profile api testing started
+2023-06-05 01:21:04,001 : INFO : test_007_get_api_users_profile : Status Code asserted successfully
+2023-06-05 01:21:04,001 : INFO : test_007_get_api_users_profile : Success Message asserted successfully
+2023-06-05 01:21:04,048 : INFO : test_007_get_api_users_profile : Response data asserted successfully
+2023-06-05 01:21:04,067 : INFO : test_008_patch_api_users_profile : patch /users/profile api testing started
+2023-06-05 01:21:04,705 : INFO : test_008_patch_api_users_profile : Status Code asserted successfully
+2023-06-05 01:21:04,706 : INFO : test_008_patch_api_users_profile : Success Message asserted successfully
+2023-06-05 01:21:04,791 : INFO : test_009_post_api_users_forgot_password : post /users/forgot-password api testing started
+2023-06-05 01:21:05,594 : INFO : test_009_post_api_users_forgot_password : Status Code asserted successfully
+2023-06-05 01:21:05,609 : INFO : test_009_post_api_users_forgot_password : Success Message asserted successfully
+2023-06-05 01:21:05,627 : INFO : test_010_post_api_users : post /users/change-password api testing started
+2023-06-05 01:21:06,502 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 01:21:07,131 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 01:21:07,131 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 01:21:07,178 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 01:21:07,178 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 01:21:07,807 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 01:21:07,807 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 01:21:07,808 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 01:21:07,808 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 01:21:07,860 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 01:21:07,860 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 01:21:07,860 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 01:21:08,483 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 01:21:08,483 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 01:21:08,483 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 01:21:08,484 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 01:21:08,484 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 01:21:08,484 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 01:21:08,530 : INFO : test_004_get_api_get_notes : get /notes api testing started to get all the notes
+2023-06-05 01:21:09,055 : INFO : test_004_get_api_get_notes : Status Code asserted successfully
+2023-06-05 01:21:09,089 : INFO : test_005_get_api_get_note_by_id : get /notes/id api testing started to get a note by id
+2023-06-05 01:21:09,618 : INFO : test_005_get_api_get_note_by_id : Status Code asserted successfully
+2023-06-05 01:21:09,619 : INFO : test_005_get_api_get_note_by_id : Success Message asserted successfully
+2023-06-05 01:21:09,652 : INFO : test_005_get_api_get_note_by_id : Response data asserted successfully
+2023-06-05 01:21:09,672 : INFO : test_006_put_api_edit_notes : put /notes/id api testing started to update a note by id
+2023-06-05 01:21:09,765 : INFO : test_007_patch_api_users : patch /notes/id api testing started to update the completed status of a note
+2023-06-05 01:21:10,402 : INFO : test_007_patch_api_users : Status Code asserted successfully
+2023-06-05 01:21:10,402 : INFO : test_007_patch_api_users : Success Message asserted successfully
+2023-06-05 01:21:10,403 : INFO : test_007_patch_api_users : Response data asserted successfully
+2023-06-05 01:21:10,425 : INFO : test_008_delete_api_users : delete /notes/id api testing started to delete a note by id
+2023-06-05 01:21:11,022 : INFO : test_008_delete_api_users : Status Code asserted successfully
+2023-06-05 01:21:11,023 : INFO : test_008_delete_api_users : Success Message asserted successfully
+2023-06-05 01:21:11,044 : INFO : test_009_delete_api_logout_user_account : delete /users/logout api testing started to logout a user
+2023-06-05 01:21:11,635 : INFO : test_009_delete_api_logout_user_account : Status Code asserted successfully
+2023-06-05 01:21:11,635 : INFO : test_009_delete_api_logout_user_account : Success Message asserted successfully
+2023-06-05 01:21:12,408 : INFO : test_011_delete_api_delete_user_account : delete /users/delete-account api testing started to delete a user
+2023-06-05 01:21:13,202 : INFO : test_011_delete_api_delete_user_account : Status Code asserted successfully
+2023-06-05 01:21:13,202 : INFO : test_011_delete_api_delete_user_account : Success Message asserted successfully
+2023-06-05 01:25:37,760 : INFO : test_001_get_api_health_check : get /health-check api testing started
+2023-06-05 01:25:38,316 : INFO : test_001_get_api_health_check : Status Code asserted successfully
+2023-06-05 01:25:38,316 : INFO : test_001_get_api_health_check : Response data
+2023-06-05 01:25:38,331 : INFO : test_001_get_api_health_check : Success Message asserted successfully
+2023-06-05 01:25:38,351 : INFO : test_002_get_api_health_check_negative : get /health-check api testing started for wrong api endpoint
+2023-06-05 01:25:38,854 : INFO : test_002_get_api_health_check_negative : Status Code asserted successfully
+2023-06-05 01:25:38,854 : INFO : test_002_get_api_health_check_negative : Success Message asserted successfully
+2023-06-05 01:25:38,876 : INFO : test_003_post_api_register_users : post /users/register api testing started
+2023-06-05 01:25:39,522 : INFO : test_003_post_api_register_users : Status Code asserted successfully
+2023-06-05 01:25:39,523 : INFO : test_003_post_api_register_users : Success Message asserted successfully
+2023-06-05 01:25:39,594 : INFO : test_003_post_api_register_users : Response data asserted successfully
+2023-06-05 01:25:39,614 : INFO : test_004_post_api_register_users_negative : post /users/register api testing started for registered user
+2023-06-05 01:25:40,089 : INFO : test_004_post_api_register_users_negative : Status Code asserted successfully
+2023-06-05 01:25:40,089 : INFO : test_004_post_api_register_users_negative : Success Message asserted successfully
+2023-06-05 01:25:40,108 : INFO : test_005_post_api_users_login : post /users/login api testing started
+2023-06-05 01:25:40,785 : INFO : test_005_post_api_users_login : Status Code asserted successfully
+2023-06-05 01:25:40,828 : INFO : test_005_post_api_users_login : Success Message asserted successfully
+2023-06-05 01:25:40,871 : INFO : test_005_post_api_users_login : Response data asserted successfully
+2023-06-05 01:25:40,892 : INFO : test_006_post_api_users_login_negative : post /users/login api testing started for invalid email and password
+2023-06-05 01:25:41,454 : INFO : test_006_post_api_users_login_negative : Status Code asserted successfully
+2023-06-05 01:25:41,455 : INFO : test_006_post_api_users_login_negative : Success Message asserted successfully
+2023-06-05 01:25:41,475 : INFO : test_007_get_api_users_profile : get /users/profile api testing started
+2023-06-05 01:25:41,980 : INFO : test_007_get_api_users_profile : Status Code asserted successfully
+2023-06-05 01:25:41,981 : INFO : test_007_get_api_users_profile : Success Message asserted successfully
+2023-06-05 01:25:42,026 : INFO : test_007_get_api_users_profile : Response data asserted successfully
+2023-06-05 01:25:42,045 : INFO : test_008_patch_api_users_profile : patch /users/profile api testing started
+2023-06-05 01:25:42,701 : INFO : test_008_patch_api_users_profile : Status Code asserted successfully
+2023-06-05 01:25:42,702 : INFO : test_008_patch_api_users_profile : Success Message asserted successfully
+2023-06-05 01:25:42,775 : INFO : test_008_patch_api_users_profile : Response data asserted successfully
+2023-06-05 01:25:42,794 : INFO : test_009_post_api_users_forgot_password : post /users/forgot-password api testing started
+2023-06-05 01:25:43,651 : INFO : test_009_post_api_users_forgot_password : Status Code asserted successfully
+2023-06-05 01:25:43,665 : INFO : test_009_post_api_users_forgot_password : Success Message asserted successfully
+2023-06-05 01:25:43,685 : INFO : test_010_post_api_users : post /users/change-password api testing started
+2023-06-05 01:25:44,547 : INFO : test_010_post_api_users : Status Code asserted successfully
+2023-06-05 01:25:44,547 : INFO : test_010_post_api_users : Success Message asserted successfully
+2023-06-05 01:25:44,584 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 01:25:45,208 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 01:25:45,208 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 01:25:45,257 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 01:25:45,257 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 01:25:45,871 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 01:25:45,871 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 01:25:45,872 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 01:25:45,872 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 01:25:45,917 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 01:25:45,917 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 01:25:45,917 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 01:25:46,542 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 01:25:46,542 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 01:25:46,542 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 01:25:46,542 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 01:25:46,542 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 01:25:46,542 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 01:25:46,585 : INFO : test_004_get_api_get_notes : get /notes api testing started to get all the notes
+2023-06-05 01:25:47,085 : INFO : test_004_get_api_get_notes : Status Code asserted successfully
+2023-06-05 01:25:47,114 : INFO : test_005_get_api_get_note_by_id : get /notes/id api testing started to get a note by id
+2023-06-05 01:25:47,645 : INFO : test_005_get_api_get_note_by_id : Status Code asserted successfully
+2023-06-05 01:25:47,645 : INFO : test_005_get_api_get_note_by_id : Success Message asserted successfully
+2023-06-05 01:25:47,678 : INFO : test_005_get_api_get_note_by_id : Response data asserted successfully
+2023-06-05 01:25:47,701 : INFO : test_006_put_api_edit_notes : put /notes/id api testing started to update a note by id
+2023-06-05 01:25:47,825 : INFO : test_007_patch_api_users : patch /notes/id api testing started to update the completed status of a note
+2023-06-05 01:25:48,430 : INFO : test_007_patch_api_users : Status Code asserted successfully
+2023-06-05 01:25:48,430 : INFO : test_007_patch_api_users : Success Message asserted successfully
+2023-06-05 01:25:48,430 : INFO : test_007_patch_api_users : Response data asserted successfully
+2023-06-05 01:25:48,450 : INFO : test_008_delete_api_users : delete /notes/id api testing started to delete a note by id
+2023-06-05 01:25:49,046 : INFO : test_008_delete_api_users : Status Code asserted successfully
+2023-06-05 01:25:49,047 : INFO : test_008_delete_api_users : Success Message asserted successfully
+2023-06-05 01:25:49,067 : INFO : test_009_delete_api_logout_user_account : delete /users/logout api testing started to logout a user
+2023-06-05 01:25:49,654 : INFO : test_009_delete_api_logout_user_account : Status Code asserted successfully
+2023-06-05 01:25:49,655 : INFO : test_009_delete_api_logout_user_account : Success Message asserted successfully
+2023-06-05 01:25:50,196 : INFO : test_011_delete_api_delete_user_account : delete /users/delete-account api testing started to delete a user
+2023-06-05 01:32:16,184 : INFO : test_001_get_api_health_check : get /health-check api testing started
+2023-06-05 01:32:16,738 : INFO : test_001_get_api_health_check : Status Code asserted successfully
+2023-06-05 01:32:16,738 : INFO : test_001_get_api_health_check : Response data
+2023-06-05 01:32:16,753 : INFO : test_001_get_api_health_check : Success Message asserted successfully
+2023-06-05 01:32:16,773 : INFO : test_002_get_api_health_check_negative : get /health-check api testing started for wrong api endpoint
+2023-06-05 01:32:17,779 : INFO : test_002_get_api_health_check_negative : Status Code asserted successfully
+2023-06-05 01:32:17,779 : INFO : test_002_get_api_health_check_negative : Success Message asserted successfully
+2023-06-05 01:32:17,798 : INFO : test_003_post_api_register_users : post /users/register api testing started
+2023-06-05 01:32:18,575 : INFO : test_003_post_api_register_users : Status Code asserted successfully
+2023-06-05 01:32:18,576 : INFO : test_003_post_api_register_users : Success Message asserted successfully
+2023-06-05 01:32:18,661 : INFO : test_003_post_api_register_users : Response data asserted successfully
+2023-06-05 01:32:18,684 : INFO : test_004_post_api_register_users_negative : post /users/register api testing started for registered user
+2023-06-05 01:32:19,136 : INFO : test_004_post_api_register_users_negative : Status Code asserted successfully
+2023-06-05 01:32:19,136 : INFO : test_004_post_api_register_users_negative : Success Message asserted successfully
+2023-06-05 01:32:19,155 : INFO : test_005_post_api_users_login : post /users/login api testing started
+2023-06-05 01:32:19,853 : INFO : test_005_post_api_users_login : Status Code asserted successfully
+2023-06-05 01:32:19,894 : INFO : test_005_post_api_users_login : Success Message asserted successfully
+2023-06-05 01:32:19,936 : INFO : test_005_post_api_users_login : Response data asserted successfully
+2023-06-05 01:32:19,955 : INFO : test_006_post_api_users_login_negative : post /users/login api testing started for invalid email and password
+2023-06-05 01:32:20,510 : INFO : test_006_post_api_users_login_negative : Status Code asserted successfully
+2023-06-05 01:32:20,511 : INFO : test_006_post_api_users_login_negative : Success Message asserted successfully
+2023-06-05 01:32:20,532 : INFO : test_007_get_api_users_profile : get /users/profile api testing started
+2023-06-05 01:32:21,192 : INFO : test_007_get_api_users_profile : Status Code asserted successfully
+2023-06-05 01:32:21,192 : INFO : test_007_get_api_users_profile : Success Message asserted successfully
+2023-06-05 01:32:21,236 : INFO : test_007_get_api_users_profile : Response data asserted successfully
+2023-06-05 01:32:21,257 : INFO : test_008_patch_api_users_profile : patch /users/profile api testing started
+2023-06-05 01:32:22,104 : INFO : test_008_patch_api_users_profile : Status Code asserted successfully
+2023-06-05 01:32:22,105 : INFO : test_008_patch_api_users_profile : Success Message asserted successfully
+2023-06-05 01:32:22,195 : INFO : test_008_patch_api_users_profile : Response data asserted successfully
+2023-06-05 01:32:22,219 : INFO : test_009_post_api_users_forgot_password : post /users/forgot-password api testing started
+2023-06-05 01:32:23,316 : INFO : test_009_post_api_users_forgot_password : Status Code asserted successfully
+2023-06-05 01:32:23,332 : INFO : test_009_post_api_users_forgot_password : Success Message asserted successfully
+2023-06-05 01:32:23,355 : INFO : test_010_post_api_users : post /users/change-password api testing started
+2023-06-05 01:32:24,565 : INFO : test_010_post_api_users : Status Code asserted successfully
+2023-06-05 01:32:24,565 : INFO : test_010_post_api_users : Success Message asserted successfully
+2023-06-05 01:32:24,605 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 01:32:25,411 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 01:32:25,411 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 01:32:25,440 : INFO : test_003_post_api_create_notes : Response data asserted successfully for 'Home' Category
+2023-06-05 01:32:25,462 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 01:32:25,462 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 01:32:26,404 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 01:32:26,404 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 01:32:26,405 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 01:32:26,405 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 01:32:26,436 : INFO : test_003_post_api_create_notes : Response data asserted successfully for 'Work' Category
+2023-06-05 01:32:26,436 : INFO : test_003_post_api_create_notes : Response data asserted successfully for 'Work' Category
+2023-06-05 01:32:26,456 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 01:32:26,456 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 01:32:26,456 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 01:32:27,272 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 01:32:27,272 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 01:32:27,272 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 01:32:27,273 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 01:32:27,273 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 01:32:27,273 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 01:32:27,304 : INFO : test_003_post_api_create_notes : Response data asserted successfully for 'Personal' Category
+2023-06-05 01:32:27,304 : INFO : test_003_post_api_create_notes : Response data asserted successfully for 'Personal' Category
+2023-06-05 01:32:27,304 : INFO : test_003_post_api_create_notes : Response data asserted successfully for 'Personal' Category
+2023-06-05 01:32:27,324 : INFO : test_004_get_api_get_notes : get /notes api testing started to get all the notes
+2023-06-05 01:32:27,894 : INFO : test_004_get_api_get_notes : Status Code asserted successfully
+2023-06-05 01:32:27,938 : INFO : test_005_get_api_get_note_by_id : get /notes/id api testing started to get a note by id
+2023-06-05 01:32:28,461 : INFO : test_005_get_api_get_note_by_id : Status Code asserted successfully
+2023-06-05 01:32:28,462 : INFO : test_005_get_api_get_note_by_id : Success Message asserted successfully
+2023-06-05 01:32:28,494 : INFO : test_005_get_api_get_note_by_id : Response data asserted successfully
+2023-06-05 01:32:28,515 : INFO : test_006_put_api_edit_notes : put /notes/id api testing started to update a note by id
+2023-06-05 01:32:28,626 : INFO : test_007_patch_api_users : patch /notes/id api testing started to update the completed status of a note
+2023-06-05 01:32:29,238 : INFO : test_007_patch_api_users : Status Code asserted successfully
+2023-06-05 01:32:29,239 : INFO : test_007_patch_api_users : Success Message asserted successfully
+2023-06-05 01:32:29,239 : INFO : test_007_patch_api_users : Response data asserted successfully
+2023-06-05 01:32:29,257 : INFO : test_008_delete_api_users : delete /notes/id api testing started to delete a note by id
+2023-06-05 01:32:29,857 : INFO : test_008_delete_api_users : Status Code asserted successfully
+2023-06-05 01:32:29,857 : INFO : test_008_delete_api_users : Success Message asserted successfully
+2023-06-05 01:32:29,876 : INFO : test_009_delete_api_logout_user_account : delete /users/logout api testing started to logout a user
+2023-06-05 01:32:30,479 : INFO : test_009_delete_api_logout_user_account : Status Code asserted successfully
+2023-06-05 01:32:30,479 : INFO : test_009_delete_api_logout_user_account : Success Message asserted successfully
+2023-06-05 01:32:31,292 : INFO : test_011_delete_api_delete_user_account : delete /users/delete-account api testing started to delete a user
+2023-06-05 01:32:32,081 : INFO : test_011_delete_api_delete_user_account : Status Code asserted successfully
+2023-06-05 01:32:32,081 : INFO : test_011_delete_api_delete_user_account : Success Message asserted successfully
+2023-06-05 01:33:33,841 : INFO : test_001_get_api_health_check : get /health-check api testing started
+2023-06-05 01:33:34,337 : INFO : test_001_get_api_health_check : Status Code asserted successfully
+2023-06-05 01:33:34,337 : INFO : test_001_get_api_health_check : Response data
+2023-06-05 01:33:34,352 : INFO : test_001_get_api_health_check : Success Message asserted successfully
+2023-06-05 01:33:34,372 : INFO : test_002_get_api_health_check_negative : get /health-check api testing started for wrong api endpoint
+2023-06-05 01:33:34,708 : INFO : test_002_get_api_health_check_negative : Status Code asserted successfully
+2023-06-05 01:33:34,708 : INFO : test_002_get_api_health_check_negative : Success Message asserted successfully
+2023-06-05 01:33:34,727 : INFO : test_003_post_api_register_users : post /users/register api testing started
+2023-06-05 01:33:35,651 : INFO : test_003_post_api_register_users : Status Code asserted successfully
+2023-06-05 01:33:35,651 : INFO : test_003_post_api_register_users : Success Message asserted successfully
+2023-06-05 01:33:35,722 : INFO : test_003_post_api_register_users : Response data asserted successfully
+2023-06-05 01:33:35,743 : INFO : test_004_post_api_register_users_negative : post /users/register api testing started for registered user
+2023-06-05 01:33:36,209 : INFO : test_004_post_api_register_users_negative : Status Code asserted successfully
+2023-06-05 01:33:36,209 : INFO : test_004_post_api_register_users_negative : Success Message asserted successfully
+2023-06-05 01:33:36,235 : INFO : test_005_post_api_users_login : post /users/login api testing started
+2023-06-05 01:33:36,930 : INFO : test_005_post_api_users_login : Status Code asserted successfully
+2023-06-05 01:33:36,972 : INFO : test_005_post_api_users_login : Success Message asserted successfully
+2023-06-05 01:33:37,014 : INFO : test_005_post_api_users_login : Response data asserted successfully
+2023-06-05 01:33:37,033 : INFO : test_006_post_api_users_login_negative : post /users/login api testing started for invalid email and password
+2023-06-05 01:33:37,466 : INFO : test_006_post_api_users_login_negative : Status Code asserted successfully
+2023-06-05 01:33:37,466 : INFO : test_006_post_api_users_login_negative : Success Message asserted successfully
+2023-06-05 01:33:37,486 : INFO : test_007_get_api_users_profile : get /users/profile api testing started
+2023-06-05 01:33:38,044 : INFO : test_007_get_api_users_profile : Status Code asserted successfully
+2023-06-05 01:33:38,044 : INFO : test_007_get_api_users_profile : Success Message asserted successfully
+2023-06-05 01:33:38,087 : INFO : test_007_get_api_users_profile : Response data asserted successfully
+2023-06-05 01:33:38,105 : INFO : test_008_patch_api_users_profile : patch /users/profile api testing started
+2023-06-05 01:33:38,914 : INFO : test_008_patch_api_users_profile : Status Code asserted successfully
+2023-06-05 01:33:38,915 : INFO : test_008_patch_api_users_profile : Success Message asserted successfully
+2023-06-05 01:33:38,984 : INFO : test_008_patch_api_users_profile : Response data asserted successfully
+2023-06-05 01:33:39,004 : INFO : test_009_post_api_users_forgot_password : post /users/forgot-password api testing started
+2023-06-05 01:33:39,929 : INFO : test_009_post_api_users_forgot_password : Status Code asserted successfully
+2023-06-05 01:33:39,943 : INFO : test_009_post_api_users_forgot_password : Success Message asserted successfully
+2023-06-05 01:33:39,963 : INFO : test_010_post_api_users : post /users/change-password api testing started
+2023-06-05 01:33:40,808 : INFO : test_010_post_api_users : Status Code asserted successfully
+2023-06-05 01:33:40,808 : INFO : test_010_post_api_users : Success Message asserted successfully
+2023-06-05 01:33:40,845 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 01:33:41,482 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 01:33:41,482 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 01:33:41,511 : INFO : test_003_post_api_create_notes : Response data asserted successfully for 'Home' Category
+2023-06-05 01:33:41,530 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 01:33:41,530 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 01:33:42,162 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 01:33:42,162 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 01:33:42,163 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 01:33:42,163 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 01:33:42,192 : INFO : test_003_post_api_create_notes : Response data asserted successfully for 'Work' Category
+2023-06-05 01:33:42,192 : INFO : test_003_post_api_create_notes : Response data asserted successfully for 'Work' Category
+2023-06-05 01:33:42,212 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 01:33:42,212 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 01:33:42,212 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 01:33:42,847 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 01:33:42,847 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 01:33:42,847 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 01:33:42,848 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 01:33:42,848 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 01:33:42,848 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 01:33:42,881 : INFO : test_003_post_api_create_notes : Response data asserted successfully for 'Personal' Category
+2023-06-05 01:33:42,881 : INFO : test_003_post_api_create_notes : Response data asserted successfully for 'Personal' Category
+2023-06-05 01:33:42,881 : INFO : test_003_post_api_create_notes : Response data asserted successfully for 'Personal' Category
+2023-06-05 01:33:42,902 : INFO : test_004_get_api_get_notes : get /notes api testing started to get all the notes
+2023-06-05 01:33:43,422 : INFO : test_004_get_api_get_notes : Status Code asserted successfully
+2023-06-05 01:33:43,554 : INFO : test_004_get_api_get_notes : Response data asserted successfully
+2023-06-05 01:33:43,554 : INFO : test_004_get_api_get_notes : Success Message asserted successfully
+2023-06-05 01:33:43,573 : INFO : test_005_get_api_get_note_by_id : get /notes/id api testing started to get a note by id
+2023-06-05 01:33:44,107 : INFO : test_005_get_api_get_note_by_id : Status Code asserted successfully
+2023-06-05 01:33:44,107 : INFO : test_005_get_api_get_note_by_id : Success Message asserted successfully
+2023-06-05 01:33:44,136 : INFO : test_005_get_api_get_note_by_id : Response data asserted successfully
+2023-06-05 01:33:44,155 : INFO : test_006_put_api_edit_notes : put /notes/id api testing started to update a note by id
+2023-06-05 01:33:44,246 : INFO : test_007_patch_api_users : patch /notes/id api testing started to update the completed status of a note
+2023-06-05 01:33:44,841 : INFO : test_007_patch_api_users : Status Code asserted successfully
+2023-06-05 01:33:44,841 : INFO : test_007_patch_api_users : Success Message asserted successfully
+2023-06-05 01:33:44,842 : INFO : test_007_patch_api_users : Response data asserted successfully
+2023-06-05 01:33:44,860 : INFO : test_008_delete_api_users : delete /notes/id api testing started to delete a note by id
+2023-06-05 01:33:45,459 : INFO : test_008_delete_api_users : Status Code asserted successfully
+2023-06-05 01:33:45,460 : INFO : test_008_delete_api_users : Success Message asserted successfully
+2023-06-05 01:33:45,479 : INFO : test_009_delete_api_logout_user_account : delete /users/logout api testing started to logout a user
+2023-06-05 01:33:46,073 : INFO : test_009_delete_api_logout_user_account : Status Code asserted successfully
+2023-06-05 01:33:46,074 : INFO : test_009_delete_api_logout_user_account : Success Message asserted successfully
+2023-06-05 01:33:46,832 : INFO : test_011_delete_api_delete_user_account : delete /users/delete-account api testing started to delete a user
+2023-06-05 01:33:47,621 : INFO : test_011_delete_api_delete_user_account : Status Code asserted successfully
+2023-06-05 01:33:47,621 : INFO : test_011_delete_api_delete_user_account : Success Message asserted successfully
+2023-06-05 01:34:38,224 : INFO : test_001_get_api_health_check : get /health-check api testing started
+2023-06-05 01:34:38,737 : INFO : test_001_get_api_health_check : Status Code asserted successfully
+2023-06-05 01:34:38,737 : INFO : test_001_get_api_health_check : Response data
+2023-06-05 01:34:38,754 : INFO : test_001_get_api_health_check : Success Message asserted successfully
+2023-06-05 01:34:38,775 : INFO : test_002_get_api_health_check_negative : get /health-check api testing started for wrong api endpoint
+2023-06-05 01:34:39,279 : INFO : test_002_get_api_health_check_negative : Status Code asserted successfully
+2023-06-05 01:34:39,279 : INFO : test_002_get_api_health_check_negative : Success Message asserted successfully
+2023-06-05 01:34:39,301 : INFO : test_003_post_api_register_users : post /users/register api testing started
+2023-06-05 01:34:39,965 : INFO : test_003_post_api_register_users : Status Code asserted successfully
+2023-06-05 01:34:39,965 : INFO : test_003_post_api_register_users : Success Message asserted successfully
+2023-06-05 01:34:40,060 : INFO : test_003_post_api_register_users : Response data asserted successfully
+2023-06-05 01:34:40,085 : INFO : test_004_post_api_register_users_negative : post /users/register api testing started for registered user
+2023-06-05 01:34:40,582 : INFO : test_004_post_api_register_users_negative : Status Code asserted successfully
+2023-06-05 01:34:40,583 : INFO : test_004_post_api_register_users_negative : Success Message asserted successfully
+2023-06-05 01:34:40,605 : INFO : test_005_post_api_users_login : post /users/login api testing started
+2023-06-05 01:34:41,305 : INFO : test_005_post_api_users_login : Status Code asserted successfully
+2023-06-05 01:34:41,360 : INFO : test_005_post_api_users_login : Success Message asserted successfully
+2023-06-05 01:34:41,416 : INFO : test_005_post_api_users_login : Response data asserted successfully
+2023-06-05 01:34:41,436 : INFO : test_006_post_api_users_login_negative : post /users/login api testing started for invalid email and password
+2023-06-05 01:34:42,015 : INFO : test_006_post_api_users_login_negative : Status Code asserted successfully
+2023-06-05 01:34:42,015 : INFO : test_006_post_api_users_login_negative : Success Message asserted successfully
+2023-06-05 01:34:42,038 : INFO : test_007_get_api_users_profile : get /users/profile api testing started
+2023-06-05 01:34:42,553 : INFO : test_007_get_api_users_profile : Status Code asserted successfully
+2023-06-05 01:34:42,553 : INFO : test_007_get_api_users_profile : Success Message asserted successfully
+2023-06-05 01:34:42,597 : INFO : test_007_get_api_users_profile : Response data asserted successfully
+2023-06-05 01:34:42,615 : INFO : test_008_patch_api_users_profile : patch /users/profile api testing started
+2023-06-05 01:34:43,245 : INFO : test_008_patch_api_users_profile : Status Code asserted successfully
+2023-06-05 01:34:43,246 : INFO : test_008_patch_api_users_profile : Success Message asserted successfully
+2023-06-05 01:34:43,319 : INFO : test_008_patch_api_users_profile : Response data asserted successfully
+2023-06-05 01:34:43,340 : INFO : test_009_post_api_users_forgot_password : post /users/forgot-password api testing started
+2023-06-05 01:34:44,030 : INFO : test_009_post_api_users_forgot_password : Status Code asserted successfully
+2023-06-05 01:34:44,044 : INFO : test_009_post_api_users_forgot_password : Success Message asserted successfully
+2023-06-05 01:34:44,063 : INFO : test_010_post_api_users : post /users/change-password api testing started
+2023-06-05 01:34:56,301 : INFO : test_010_post_api_users : Status Code asserted successfully
+2023-06-05 01:34:56,302 : INFO : test_010_post_api_users : Success Message asserted successfully
+2023-06-05 01:34:56,338 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 01:35:02,143 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 01:35:02,144 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 01:35:02,174 : INFO : test_003_post_api_create_notes : Response data asserted successfully for 'Home' Category
+2023-06-05 01:35:02,193 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 01:35:02,193 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 01:35:02,838 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 01:35:02,838 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 01:35:02,838 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 01:35:02,838 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 01:35:02,867 : INFO : test_003_post_api_create_notes : Response data asserted successfully for 'Work' Category
+2023-06-05 01:35:02,867 : INFO : test_003_post_api_create_notes : Response data asserted successfully for 'Work' Category
+2023-06-05 01:35:02,886 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 01:35:02,886 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 01:35:02,886 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 01:35:03,549 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 01:35:03,549 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 01:35:03,549 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 01:35:03,550 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 01:35:03,550 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 01:35:03,550 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 01:35:03,579 : INFO : test_003_post_api_create_notes : Response data asserted successfully for 'Personal' Category
+2023-06-05 01:35:03,579 : INFO : test_003_post_api_create_notes : Response data asserted successfully for 'Personal' Category
+2023-06-05 01:35:03,579 : INFO : test_003_post_api_create_notes : Response data asserted successfully for 'Personal' Category
+2023-06-05 01:35:03,599 : INFO : test_004_get_api_get_notes : get /notes api testing started to get all the notes
+2023-06-05 01:35:04,141 : INFO : test_004_get_api_get_notes : Status Code asserted successfully
+2023-06-05 01:35:04,276 : INFO : test_004_get_api_get_notes : Response data asserted successfully
+2023-06-05 01:35:04,276 : INFO : test_004_get_api_get_notes : Success Message asserted successfully
+2023-06-05 01:35:04,296 : INFO : test_005_get_api_get_note_by_id : get /notes/id api testing started to get a note by id
+2023-06-05 01:35:04,851 : INFO : test_005_get_api_get_note_by_id : Status Code asserted successfully
+2023-06-05 01:35:04,851 : INFO : test_005_get_api_get_note_by_id : Success Message asserted successfully
+2023-06-05 01:35:04,879 : INFO : test_005_get_api_get_note_by_id : Response data asserted successfully
+2023-06-05 01:35:04,898 : INFO : test_006_put_api_edit_notes : put /notes/id api testing started to update a note by id
+2023-06-05 01:35:05,572 : INFO : test_006_put_api_edit_notes : Status Code asserted successfully
+2023-06-05 01:35:05,572 : INFO : test_006_put_api_edit_notes : Success Message asserted successfully
+2023-06-05 01:35:05,615 : INFO : test_006_put_api_edit_notes : Response data asserted successfully
+2023-06-05 01:35:05,633 : INFO : test_007_patch_api_users : patch /notes/id api testing started to update the completed status of a note
+2023-06-05 01:35:06,259 : INFO : test_007_patch_api_users : Status Code asserted successfully
+2023-06-05 01:35:06,259 : INFO : test_007_patch_api_users : Success Message asserted successfully
+2023-06-05 01:35:06,259 : INFO : test_007_patch_api_users : Response data asserted successfully
+2023-06-05 01:35:06,277 : INFO : test_008_delete_api_users : delete /notes/id api testing started to delete a note by id
+2023-06-05 01:35:06,894 : INFO : test_008_delete_api_users : Status Code asserted successfully
+2023-06-05 01:35:06,895 : INFO : test_008_delete_api_users : Success Message asserted successfully
+2023-06-05 01:35:06,913 : INFO : test_009_delete_api_logout_user_account : delete /users/logout api testing started to logout a user
+2023-06-05 01:35:07,553 : INFO : test_009_delete_api_logout_user_account : Status Code asserted successfully
+2023-06-05 01:35:07,554 : INFO : test_009_delete_api_logout_user_account : Success Message asserted successfully
+2023-06-05 01:35:08,358 : INFO : test_011_delete_api_delete_user_account : delete /users/delete-account api testing started to delete a user
+2023-06-05 01:35:09,165 : INFO : test_011_delete_api_delete_user_account : Status Code asserted successfully
+2023-06-05 01:35:09,165 : INFO : test_011_delete_api_delete_user_account : Success Message asserted successfully
+2023-06-05 01:37:18,884 : INFO : test_001_get_api_health_check : get /health-check api testing started
+2023-06-05 01:37:19,440 : INFO : test_001_get_api_health_check : Status Code asserted successfully
+2023-06-05 01:37:19,441 : INFO : test_001_get_api_health_check : Response data
+2023-06-05 01:37:19,457 : INFO : test_001_get_api_health_check : Success Message asserted successfully
+2023-06-05 01:37:19,479 : INFO : test_002_get_api_health_check_negative : get /health-check api testing started for wrong api endpoint
+2023-06-05 01:37:19,820 : INFO : test_002_get_api_health_check_negative : Status Code asserted successfully
+2023-06-05 01:37:19,820 : INFO : test_002_get_api_health_check_negative : Success Message asserted successfully
+2023-06-05 01:37:19,840 : INFO : test_003_post_api_register_users : post /users/register api testing started
+2023-06-05 01:37:20,655 : INFO : test_003_post_api_register_users : Status Code asserted successfully
+2023-06-05 01:37:20,655 : INFO : test_003_post_api_register_users : Success Message asserted successfully
+2023-06-05 01:37:20,728 : INFO : test_003_post_api_register_users : Response data asserted successfully
+2023-06-05 01:37:20,749 : INFO : test_004_post_api_register_users_negative : post /users/register api testing started for registered user
+2023-06-05 01:37:21,363 : INFO : test_004_post_api_register_users_negative : Status Code asserted successfully
+2023-06-05 01:37:21,364 : INFO : test_004_post_api_register_users_negative : Success Message asserted successfully
+2023-06-05 01:37:21,385 : INFO : test_005_post_api_users_login : post /users/login api testing started
+2023-06-05 01:37:22,090 : INFO : test_005_post_api_users_login : Status Code asserted successfully
+2023-06-05 01:37:22,142 : INFO : test_005_post_api_users_login : Success Message asserted successfully
+2023-06-05 01:37:22,194 : INFO : test_005_post_api_users_login : Response data asserted successfully
+2023-06-05 01:37:22,218 : INFO : test_006_post_api_users_login_negative : post /users/login api testing started for invalid email and password
+2023-06-05 01:37:22,668 : INFO : test_006_post_api_users_login_negative : Status Code asserted successfully
+2023-06-05 01:37:22,668 : INFO : test_006_post_api_users_login_negative : Success Message asserted successfully
+2023-06-05 01:37:22,694 : INFO : test_007_get_api_users_profile : get /users/profile api testing started
+2023-06-05 01:37:23,235 : INFO : test_007_get_api_users_profile : Status Code asserted successfully
+2023-06-05 01:37:23,236 : INFO : test_007_get_api_users_profile : Success Message asserted successfully
+2023-06-05 01:37:23,283 : INFO : test_007_get_api_users_profile : Response data asserted successfully
+2023-06-05 01:37:23,303 : INFO : test_008_patch_api_users_profile : patch /users/profile api testing started
+2023-06-05 01:37:23,971 : INFO : test_008_patch_api_users_profile : Status Code asserted successfully
+2023-06-05 01:37:23,971 : INFO : test_008_patch_api_users_profile : Success Message asserted successfully
+2023-06-05 01:37:24,049 : INFO : test_008_patch_api_users_profile : Response data asserted successfully
+2023-06-05 01:37:24,073 : INFO : test_009_post_api_users_forgot_password : post /users/forgot-password api testing started
+2023-06-05 01:37:24,873 : INFO : test_009_post_api_users_forgot_password : Status Code asserted successfully
+2023-06-05 01:37:24,891 : INFO : test_009_post_api_users_forgot_password : Success Message asserted successfully
+2023-06-05 01:37:24,916 : INFO : test_010_post_api_users : post /users/change-password api testing started
+2023-06-05 01:37:25,812 : INFO : test_010_post_api_users : Status Code asserted successfully
+2023-06-05 01:37:25,812 : INFO : test_010_post_api_users : Success Message asserted successfully
+2023-06-05 01:37:25,856 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 01:37:26,508 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 01:37:26,508 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 01:37:26,538 : INFO : test_003_post_api_create_notes : Response data asserted successfully for 'Home' Category
+2023-06-05 01:37:26,559 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 01:37:26,559 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 01:37:27,204 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 01:37:27,204 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 01:37:27,204 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 01:37:27,204 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 01:37:27,234 : INFO : test_003_post_api_create_notes : Response data asserted successfully for 'Work' Category
+2023-06-05 01:37:27,234 : INFO : test_003_post_api_create_notes : Response data asserted successfully for 'Work' Category
+2023-06-05 01:37:27,255 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 01:37:27,255 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 01:37:27,255 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 01:37:27,886 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 01:37:27,886 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 01:37:27,886 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 01:37:27,887 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 01:37:27,887 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 01:37:27,887 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 01:37:27,915 : INFO : test_003_post_api_create_notes : Response data asserted successfully for 'Personal' Category
+2023-06-05 01:37:27,915 : INFO : test_003_post_api_create_notes : Response data asserted successfully for 'Personal' Category
+2023-06-05 01:37:27,915 : INFO : test_003_post_api_create_notes : Response data asserted successfully for 'Personal' Category
+2023-06-05 01:37:27,935 : INFO : test_004_get_api_get_notes : get /notes api testing started to get all the notes
+2023-06-05 01:37:28,467 : INFO : test_004_get_api_get_notes : Status Code asserted successfully
+2023-06-05 01:37:28,627 : INFO : test_004_get_api_get_notes : Response data asserted successfully
+2023-06-05 01:37:28,627 : INFO : test_004_get_api_get_notes : Success Message asserted successfully
+2023-06-05 01:37:28,645 : INFO : test_005_get_api_get_note_by_id : get /notes/id api testing started to get a note by id
+2023-06-05 01:37:29,195 : INFO : test_005_get_api_get_note_by_id : Status Code asserted successfully
+2023-06-05 01:37:29,195 : INFO : test_005_get_api_get_note_by_id : Success Message asserted successfully
+2023-06-05 01:37:29,227 : INFO : test_005_get_api_get_note_by_id : Response data asserted successfully
+2023-06-05 01:37:29,250 : INFO : test_006_put_api_edit_notes : put /notes/id api testing started to update a note by id
+2023-06-05 01:37:29,970 : INFO : test_006_put_api_edit_notes : Status Code asserted successfully
+2023-06-05 01:37:29,971 : INFO : test_006_put_api_edit_notes : Success Message asserted successfully
+2023-06-05 01:37:30,012 : INFO : test_006_put_api_edit_notes : Response data asserted successfully
+2023-06-05 01:37:30,035 : INFO : test_007_patch_api_users : patch /notes/id api testing started to update the completed status of a note
+2023-06-05 01:37:30,704 : INFO : test_007_patch_api_users : Status Code asserted successfully
+2023-06-05 01:37:30,705 : INFO : test_007_patch_api_users : Success Message asserted successfully
+2023-06-05 01:37:30,705 : INFO : test_007_patch_api_users : Response data asserted successfully
+2023-06-05 01:37:30,725 : INFO : test_008_delete_api_users : delete /notes/id api testing started to delete a note by id
+2023-06-05 01:37:31,516 : INFO : test_008_delete_api_users : Status Code asserted successfully
+2023-06-05 01:37:31,516 : INFO : test_008_delete_api_users : Success Message asserted successfully
+2023-06-05 01:37:31,539 : INFO : test_009_delete_api_logout_user_account : delete /users/logout api testing started to logout a user
+2023-06-05 01:37:32,358 : INFO : test_009_delete_api_logout_user_account : Status Code asserted successfully
+2023-06-05 01:37:32,359 : INFO : test_009_delete_api_logout_user_account : Success Message asserted successfully
+2023-06-05 01:37:33,238 : INFO : test_011_delete_api_delete_user_account : delete /users/delete-account api testing started to delete a user
+2023-06-05 01:37:34,051 : INFO : test_011_delete_api_delete_user_account : Status Code asserted successfully
+2023-06-05 01:37:34,051 : INFO : test_011_delete_api_delete_user_account : Success Message asserted successfully
+2023-06-05 01:37:40,021 : INFO : test_001_get_api_health_check : get /health-check api testing started
+2023-06-05 01:37:40,539 : INFO : test_001_get_api_health_check : Status Code asserted successfully
+2023-06-05 01:37:40,539 : INFO : test_001_get_api_health_check : Response data
+2023-06-05 01:37:40,555 : INFO : test_001_get_api_health_check : Success Message asserted successfully
+2023-06-05 01:37:40,575 : INFO : test_002_get_api_health_check_negative : get /health-check api testing started for wrong api endpoint
+2023-06-05 01:37:40,930 : INFO : test_002_get_api_health_check_negative : Status Code asserted successfully
+2023-06-05 01:37:40,931 : INFO : test_002_get_api_health_check_negative : Success Message asserted successfully
+2023-06-05 01:37:40,950 : INFO : test_003_post_api_register_users : post /users/register api testing started
+2023-06-05 01:37:41,622 : INFO : test_003_post_api_register_users : Status Code asserted successfully
+2023-06-05 01:37:41,623 : INFO : test_003_post_api_register_users : Success Message asserted successfully
+2023-06-05 01:37:41,701 : INFO : test_003_post_api_register_users : Response data asserted successfully
+2023-06-05 01:37:41,721 : INFO : test_004_post_api_register_users_negative : post /users/register api testing started for registered user
+2023-06-05 01:37:42,191 : INFO : test_004_post_api_register_users_negative : Status Code asserted successfully
+2023-06-05 01:37:42,191 : INFO : test_004_post_api_register_users_negative : Success Message asserted successfully
+2023-06-05 01:37:42,218 : INFO : test_005_post_api_users_login : post /users/login api testing started
+2023-06-05 01:37:42,925 : INFO : test_005_post_api_users_login : Status Code asserted successfully
+2023-06-05 01:37:43,015 : INFO : test_005_post_api_users_login : Success Message asserted successfully
+2023-06-05 01:37:43,061 : INFO : test_005_post_api_users_login : Response data asserted successfully
+2023-06-05 01:37:43,084 : INFO : test_006_post_api_users_login_negative : post /users/login api testing started for invalid email and password
+2023-06-05 01:37:43,506 : INFO : test_006_post_api_users_login_negative : Status Code asserted successfully
+2023-06-05 01:37:43,506 : INFO : test_006_post_api_users_login_negative : Success Message asserted successfully
+2023-06-05 01:37:43,526 : INFO : test_007_get_api_users_profile : get /users/profile api testing started
+2023-06-05 01:37:44,070 : INFO : test_007_get_api_users_profile : Status Code asserted successfully
+2023-06-05 01:37:44,071 : INFO : test_007_get_api_users_profile : Success Message asserted successfully
+2023-06-05 01:37:44,112 : INFO : test_007_get_api_users_profile : Response data asserted successfully
+2023-06-05 01:37:44,133 : INFO : test_008_patch_api_users_profile : patch /users/profile api testing started
+2023-06-05 01:37:44,801 : INFO : test_008_patch_api_users_profile : Status Code asserted successfully
+2023-06-05 01:37:44,802 : INFO : test_008_patch_api_users_profile : Success Message asserted successfully
+2023-06-05 01:37:44,873 : INFO : test_008_patch_api_users_profile : Response data asserted successfully
+2023-06-05 01:37:44,894 : INFO : test_009_post_api_users_forgot_password : post /users/forgot-password api testing started
+2023-06-05 01:37:45,801 : INFO : test_009_post_api_users_forgot_password : Status Code asserted successfully
+2023-06-05 01:37:45,818 : INFO : test_009_post_api_users_forgot_password : Success Message asserted successfully
+2023-06-05 01:37:45,839 : INFO : test_010_post_api_users : post /users/change-password api testing started
+2023-06-05 01:37:46,696 : INFO : test_010_post_api_users : Status Code asserted successfully
+2023-06-05 01:37:46,697 : INFO : test_010_post_api_users : Success Message asserted successfully
+2023-06-05 01:37:46,735 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 01:37:47,393 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 01:37:47,393 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 01:37:47,421 : INFO : test_003_post_api_create_notes : Response data asserted successfully for 'Home' Category
+2023-06-05 01:37:47,439 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 01:37:47,439 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 01:37:48,086 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 01:37:48,086 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 01:37:48,087 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 01:37:48,087 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 01:37:48,115 : INFO : test_003_post_api_create_notes : Response data asserted successfully for 'Work' Category
+2023-06-05 01:37:48,115 : INFO : test_003_post_api_create_notes : Response data asserted successfully for 'Work' Category
+2023-06-05 01:37:48,135 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 01:37:48,135 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 01:37:48,135 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 01:37:48,773 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 01:37:48,773 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 01:37:48,773 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 01:37:48,773 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 01:37:48,773 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 01:37:48,773 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 01:37:48,801 : INFO : test_003_post_api_create_notes : Response data asserted successfully for 'Personal' Category
+2023-06-05 01:37:48,801 : INFO : test_003_post_api_create_notes : Response data asserted successfully for 'Personal' Category
+2023-06-05 01:37:48,801 : INFO : test_003_post_api_create_notes : Response data asserted successfully for 'Personal' Category
+2023-06-05 01:37:48,821 : INFO : test_004_get_api_get_notes : get /notes api testing started to get all the notes
+2023-06-05 01:37:49,510 : INFO : test_004_get_api_get_notes : Status Code asserted successfully
+2023-06-05 01:37:49,642 : INFO : test_004_get_api_get_notes : Response data asserted successfully
+2023-06-05 01:37:49,642 : INFO : test_004_get_api_get_notes : Success Message asserted successfully
+2023-06-05 01:37:49,663 : INFO : test_005_get_api_get_note_by_id : get /notes/id api testing started to get a note by id
+2023-06-05 01:37:50,225 : INFO : test_005_get_api_get_note_by_id : Status Code asserted successfully
+2023-06-05 01:37:50,227 : INFO : test_005_get_api_get_note_by_id : Success Message asserted successfully
+2023-06-05 01:37:50,276 : INFO : test_005_get_api_get_note_by_id : Response data asserted successfully
+2023-06-05 01:37:50,298 : INFO : test_006_put_api_edit_notes : put /notes/id api testing started to update a note by id
+2023-06-05 01:37:51,031 : INFO : test_006_put_api_edit_notes : Status Code asserted successfully
+2023-06-05 01:37:51,032 : INFO : test_006_put_api_edit_notes : Success Message asserted successfully
+2023-06-05 01:37:51,085 : INFO : test_006_put_api_edit_notes : Response data asserted successfully
+2023-06-05 01:37:51,104 : INFO : test_007_patch_api_users : patch /notes/id api testing started to update the completed status of a note
+2023-06-05 01:37:51,703 : INFO : test_007_patch_api_users : Status Code asserted successfully
+2023-06-05 01:37:51,704 : INFO : test_007_patch_api_users : Success Message asserted successfully
+2023-06-05 01:37:51,704 : INFO : test_007_patch_api_users : Response data asserted successfully
+2023-06-05 01:37:51,723 : INFO : test_008_delete_api_users : delete /notes/id api testing started to delete a note by id
+2023-06-05 01:37:52,328 : INFO : test_008_delete_api_users : Status Code asserted successfully
+2023-06-05 01:37:52,328 : INFO : test_008_delete_api_users : Success Message asserted successfully
+2023-06-05 01:37:52,348 : INFO : test_009_delete_api_logout_user_account : delete /users/logout api testing started to logout a user
+2023-06-05 01:37:53,003 : INFO : test_009_delete_api_logout_user_account : Status Code asserted successfully
+2023-06-05 01:37:53,003 : INFO : test_009_delete_api_logout_user_account : Success Message asserted successfully
+2023-06-05 01:37:53,832 : INFO : test_011_delete_api_delete_user_account : delete /users/delete-account api testing started to delete a user
+2023-06-05 01:37:54,767 : INFO : test_011_delete_api_delete_user_account : Status Code asserted successfully
+2023-06-05 01:37:54,767 : INFO : test_011_delete_api_delete_user_account : Success Message asserted successfully
+2023-06-05 01:55:47,940 : INFO : test_001_get_api_health_check : get /health-check api testing started
+2023-06-05 01:55:48,524 : INFO : test_001_get_api_health_check : Status Code asserted successfully
+2023-06-05 01:55:48,524 : INFO : test_001_get_api_health_check : Response data
+2023-06-05 01:55:48,538 : INFO : test_001_get_api_health_check : Success Message asserted successfully
+2023-06-05 01:55:48,558 : INFO : test_002_get_api_health_check_negative : get /health-check api testing started for wrong api endpoint
+2023-06-05 01:55:48,891 : INFO : test_002_get_api_health_check_negative : Status Code asserted successfully
+2023-06-05 01:55:48,906 : INFO : test_002_get_api_health_check_negative : Success Message asserted successfully
+2023-06-05 01:55:48,924 : INFO : test_003_post_api_register_users : post /users/register api testing started
+2023-06-05 01:55:49,727 : INFO : test_003_post_api_register_users : Status Code asserted successfully
+2023-06-05 01:55:49,743 : INFO : test_003_post_api_register_users : Success Message asserted successfully
+2023-06-05 01:55:49,819 : INFO : test_003_post_api_register_users : Response data asserted successfully
+2023-06-05 01:55:49,841 : INFO : test_004_post_api_register_users_negative : post /users/register api testing started for registered user
+2023-06-05 01:55:50,472 : INFO : test_004_post_api_register_users_negative : Status Code asserted successfully
+2023-06-05 01:55:50,487 : INFO : test_004_post_api_register_users_negative : Success Message asserted successfully
+2023-06-05 01:55:50,505 : INFO : test_005_post_api_users_login : post /users/login api testing started
+2023-06-05 01:55:51,212 : INFO : test_005_post_api_users_login : Status Code asserted successfully
+2023-06-05 01:55:51,275 : INFO : test_005_post_api_users_login : Success Message asserted successfully
+2023-06-05 01:55:51,320 : INFO : test_005_post_api_users_login : Response data asserted successfully
+2023-06-05 01:55:51,339 : INFO : test_006_post_api_users_login_negative : post /users/login api testing started for invalid email and password
+2023-06-05 01:55:51,772 : INFO : test_006_post_api_users_login_negative : Status Code asserted successfully
+2023-06-05 01:55:51,791 : INFO : test_006_post_api_users_login_negative : Success Message asserted successfully
+2023-06-05 01:55:51,812 : INFO : test_007_get_api_users_profile : get /users/profile api testing started
+2023-06-05 01:55:52,331 : INFO : test_007_get_api_users_profile : Status Code asserted successfully
+2023-06-05 01:55:52,345 : INFO : test_007_get_api_users_profile : Success Message asserted successfully
+2023-06-05 01:55:52,390 : INFO : test_007_get_api_users_profile : Response data asserted successfully
+2023-06-05 01:55:52,411 : INFO : test_008_patch_api_users_profile : patch /users/profile api testing started
+2023-06-05 01:55:53,077 : INFO : test_008_patch_api_users_profile : Status Code asserted successfully
+2023-06-05 01:55:53,091 : INFO : test_008_patch_api_users_profile : Success Message asserted successfully
+2023-06-05 01:55:53,164 : INFO : test_008_patch_api_users_profile : Response data asserted successfully
+2023-06-05 01:55:53,183 : INFO : test_009_post_api_users_forgot_password : post /users/forgot-password api testing started
+2023-06-05 01:55:53,974 : INFO : test_009_post_api_users_forgot_password : Status Code asserted successfully
+2023-06-05 01:55:53,989 : INFO : test_009_post_api_users_forgot_password : Success Message asserted successfully
+2023-06-05 01:55:54,008 : INFO : test_010_post_api_users : post /users/change-password api testing started
+2023-06-05 01:55:54,883 : INFO : test_010_post_api_users : Status Code asserted successfully
+2023-06-05 01:55:54,898 : INFO : test_010_post_api_users : Success Message asserted successfully
+2023-06-05 01:55:54,937 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 01:55:55,591 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 01:55:55,608 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 01:55:55,642 : INFO : test_003_post_api_create_notes : Response data asserted successfully for 'Home' Category
+2023-06-05 01:55:55,664 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 01:55:55,664 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 01:55:56,319 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 01:55:56,319 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 01:55:56,362 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 01:55:56,362 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 01:55:56,395 : INFO : test_003_post_api_create_notes : Response data asserted successfully for 'Work' Category
+2023-06-05 01:55:56,395 : INFO : test_003_post_api_create_notes : Response data asserted successfully for 'Work' Category
+2023-06-05 01:55:56,419 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 01:55:56,419 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 01:55:56,419 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 01:55:57,091 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 01:55:57,091 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 01:55:57,091 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 01:55:57,107 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 01:55:57,107 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 01:55:57,107 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 01:55:57,134 : INFO : test_003_post_api_create_notes : Response data asserted successfully for 'Personal' Category
+2023-06-05 01:55:57,134 : INFO : test_003_post_api_create_notes : Response data asserted successfully for 'Personal' Category
+2023-06-05 01:55:57,134 : INFO : test_003_post_api_create_notes : Response data asserted successfully for 'Personal' Category
+2023-06-05 01:55:57,155 : INFO : test_004_get_api_get_notes : get /notes api testing started to get all the notes
+2023-06-05 01:55:57,661 : INFO : test_004_get_api_get_notes : Status Code asserted successfully
+2023-06-05 01:55:57,793 : INFO : test_004_get_api_get_notes : Response data asserted successfully
+2023-06-05 01:55:57,810 : INFO : test_004_get_api_get_notes : Success Message asserted successfully
+2023-06-05 01:55:57,829 : INFO : test_005_get_api_get_note_by_id : get /notes/id api testing started to get a note by id
+2023-06-05 01:55:58,363 : INFO : test_005_get_api_get_note_by_id : Status Code asserted successfully
+2023-06-05 01:55:58,379 : INFO : test_005_get_api_get_note_by_id : Success Message asserted successfully
+2023-06-05 01:55:58,406 : INFO : test_005_get_api_get_note_by_id : Response data asserted successfully
+2023-06-05 01:55:58,425 : INFO : test_006_put_api_edit_notes : put /notes/id api testing started to update a note by id
+2023-06-05 01:55:59,081 : INFO : test_006_put_api_edit_notes : Status Code asserted successfully
+2023-06-05 01:55:59,095 : INFO : test_006_put_api_edit_notes : Success Message asserted successfully
+2023-06-05 01:55:59,136 : INFO : test_006_put_api_edit_notes : Response data asserted successfully
+2023-06-05 01:55:59,155 : INFO : test_007_patch_api_users : patch /notes/id api testing started to update the completed status of a note
+2023-06-05 01:55:59,777 : INFO : test_007_patch_api_users : Status Code asserted successfully
+2023-06-05 01:55:59,795 : INFO : test_007_patch_api_users : Success Message asserted successfully
+2023-06-05 01:55:59,795 : INFO : test_007_patch_api_users : Response data asserted successfully
+2023-06-05 01:55:59,815 : INFO : test_008_delete_api_users : delete /notes/id api testing started to delete a note by id
+2023-06-05 01:56:00,419 : INFO : test_008_delete_api_users : Status Code asserted successfully
+2023-06-05 01:56:00,435 : INFO : test_008_delete_api_users : Success Message asserted successfully
+2023-06-05 01:56:00,455 : INFO : test_009_delete_api_logout_user_account : delete /users/logout api testing started to logout a user
+2023-06-05 01:56:01,070 : INFO : test_009_delete_api_logout_user_account : Status Code asserted successfully
+2023-06-05 01:56:01,085 : INFO : test_009_delete_api_logout_user_account : Success Message asserted successfully
+2023-06-05 01:56:01,863 : INFO : test_011_delete_api_delete_user_account : delete /users/delete-account api testing started to delete a user
+2023-06-05 01:56:02,660 : INFO : test_011_delete_api_delete_user_account : Status Code asserted successfully
+2023-06-05 01:56:02,674 : INFO : test_011_delete_api_delete_user_account : Success Message asserted successfully
+2023-06-05 02:06:37,600 : INFO : test_001_get_api_health_check : get /health-check api testing started
+2023-06-05 02:06:38,146 : INFO : test_001_get_api_health_check : Status Code asserted successfully
+2023-06-05 02:06:38,146 : INFO : test_001_get_api_health_check : Response data
+2023-06-05 02:06:38,162 : INFO : test_001_get_api_health_check : Success Message asserted successfully
+2023-06-05 02:06:38,191 : INFO : test_002_get_api_health_check_negative : get /health-check api testing started for wrong api endpoint
+2023-06-05 02:06:38,672 : INFO : test_002_get_api_health_check_negative : Status Code asserted successfully
+2023-06-05 02:06:38,689 : INFO : test_002_get_api_health_check_negative : Success Message asserted successfully
+2023-06-05 02:06:38,721 : INFO : test_003_post_api_register_users : post /users/register api testing started
+2023-06-05 02:06:39,395 : INFO : test_003_post_api_register_users : Status Code asserted successfully
+2023-06-05 02:06:39,410 : INFO : test_003_post_api_register_users : Success Message asserted successfully
+2023-06-05 02:06:39,487 : INFO : test_003_post_api_register_users : Response data asserted successfully
+2023-06-05 02:06:39,530 : INFO : test_004_post_api_register_users_negative : post /users/register api testing started for registered user
+2023-06-05 02:06:40,159 : INFO : test_004_post_api_register_users_negative : Status Code asserted successfully
+2023-06-05 02:06:40,174 : INFO : test_004_post_api_register_users_negative : Success Message asserted successfully
+2023-06-05 02:06:40,203 : INFO : test_005_post_api_users_login : post /users/login api testing started
+2023-06-05 02:06:40,913 : INFO : test_005_post_api_users_login : Status Code asserted successfully
+2023-06-05 02:06:40,967 : INFO : test_005_post_api_users_login : Success Message asserted successfully
+2023-06-05 02:06:41,009 : INFO : test_005_post_api_users_login : Response data asserted successfully
+2023-06-05 02:06:41,070 : INFO : test_006_post_api_users_login_negative : post /users/login api testing started for invalid email and password
+2023-06-05 02:06:41,588 : INFO : test_006_post_api_users_login_negative : Status Code asserted successfully
+2023-06-05 02:06:41,605 : INFO : test_006_post_api_users_login_negative : Success Message asserted successfully
+2023-06-05 02:06:41,634 : INFO : test_007_get_api_users_profile : get /users/profile api testing started
+2023-06-05 02:06:42,308 : INFO : test_007_get_api_users_profile : Status Code asserted successfully
+2023-06-05 02:06:42,323 : INFO : test_007_get_api_users_profile : Success Message asserted successfully
+2023-06-05 02:06:42,364 : INFO : test_007_get_api_users_profile : Response data asserted successfully
+2023-06-05 02:06:42,433 : INFO : test_008_patch_api_users_profile : patch /users/profile api testing started
+2023-06-05 02:06:43,188 : INFO : test_008_patch_api_users_profile : Status Code asserted successfully
+2023-06-05 02:06:43,203 : INFO : test_008_patch_api_users_profile : Success Message asserted successfully
+2023-06-05 02:06:43,279 : INFO : test_008_patch_api_users_profile : Response data asserted successfully
+2023-06-05 02:06:43,307 : INFO : test_009_post_api_users_forgot_password : post /users/forgot-password api testing started
+2023-06-05 02:06:44,311 : INFO : test_009_post_api_users_forgot_password : Status Code asserted successfully
+2023-06-05 02:06:44,328 : INFO : test_009_post_api_users_forgot_password : Success Message asserted successfully
+2023-06-05 02:06:44,400 : INFO : test_010_post_api_users : post /users/change-password api testing started
+2023-06-05 02:06:45,328 : INFO : test_010_post_api_users : Status Code asserted successfully
+2023-06-05 02:06:45,343 : INFO : test_010_post_api_users : Success Message asserted successfully
+2023-06-05 02:06:45,414 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 02:06:46,045 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 02:06:46,064 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 02:06:46,094 : INFO : test_003_post_api_create_notes : Response data asserted successfully for 'Home' Category
+2023-06-05 02:06:46,129 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 02:06:46,129 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 02:06:46,780 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 02:06:46,780 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 02:06:46,796 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 02:06:46,796 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 02:06:46,826 : INFO : test_003_post_api_create_notes : Response data asserted successfully for 'Work' Category
+2023-06-05 02:06:46,826 : INFO : test_003_post_api_create_notes : Response data asserted successfully for 'Work' Category
+2023-06-05 02:06:46,861 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 02:06:46,861 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 02:06:46,861 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 02:06:47,509 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 02:06:47,509 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 02:06:47,509 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 02:06:47,525 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 02:06:47,525 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 02:06:47,525 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 02:06:47,556 : INFO : test_003_post_api_create_notes : Response data asserted successfully for 'Personal' Category
+2023-06-05 02:06:47,556 : INFO : test_003_post_api_create_notes : Response data asserted successfully for 'Personal' Category
+2023-06-05 02:06:47,556 : INFO : test_003_post_api_create_notes : Response data asserted successfully for 'Personal' Category
+2023-06-05 02:06:47,588 : INFO : test_004_get_api_get_notes : get /notes api testing started to get all the notes
+2023-06-05 02:06:48,105 : INFO : test_004_get_api_get_notes : Status Code asserted successfully
+2023-06-05 02:06:48,256 : INFO : test_004_get_api_get_notes : Response data asserted successfully
+2023-06-05 02:06:48,269 : INFO : test_004_get_api_get_notes : Success Message asserted successfully
+2023-06-05 02:06:48,346 : INFO : test_005_get_api_get_note_by_id : get /notes/id api testing started to get a note by id
+2023-06-05 02:06:48,864 : INFO : test_005_get_api_get_note_by_id : Status Code asserted successfully
+2023-06-05 02:06:48,879 : INFO : test_005_get_api_get_note_by_id : Success Message asserted successfully
+2023-06-05 02:06:48,908 : INFO : test_005_get_api_get_note_by_id : Response data asserted successfully
+2023-06-05 02:06:48,939 : INFO : test_006_put_api_edit_notes : put /notes/id api testing started to update a note by id
+2023-06-05 02:06:50,620 : INFO : test_006_put_api_edit_notes : Status Code asserted successfully
+2023-06-05 02:06:50,640 : INFO : test_006_put_api_edit_notes : Success Message asserted successfully
+2023-06-05 02:06:50,690 : INFO : test_006_put_api_edit_notes : Response data asserted successfully
+2023-06-05 02:06:50,722 : INFO : test_007_patch_api_users : patch /notes/id api testing started to update the completed status of a note
+2023-06-05 02:06:51,350 : INFO : test_007_patch_api_users : Status Code asserted successfully
+2023-06-05 02:06:51,365 : INFO : test_007_patch_api_users : Success Message asserted successfully
+2023-06-05 02:06:51,366 : INFO : test_007_patch_api_users : Response data asserted successfully
+2023-06-05 02:06:51,398 : INFO : test_008_delete_api_users : delete /notes/id api testing started to delete a note by id
+2023-06-05 02:06:52,020 : INFO : test_008_delete_api_users : Status Code asserted successfully
+2023-06-05 02:06:52,035 : INFO : test_008_delete_api_users : Success Message asserted successfully
+2023-06-05 02:06:52,065 : INFO : test_009_delete_api_logout_user_account : delete /users/logout api testing started to logout a user
+2023-06-05 02:06:52,678 : INFO : test_009_delete_api_logout_user_account : Status Code asserted successfully
+2023-06-05 02:06:52,695 : INFO : test_009_delete_api_logout_user_account : Success Message asserted successfully
+2023-06-05 02:06:53,498 : INFO : test_011_delete_api_delete_user_account : delete /users/delete-account api testing started to delete a user
+2023-06-05 02:06:54,324 : INFO : test_011_delete_api_delete_user_account : Status Code asserted successfully
+2023-06-05 02:06:54,339 : INFO : test_011_delete_api_delete_user_account : Success Message asserted successfully
+2023-06-05 02:07:57,945 : INFO : test_001_get_api_health_check : get /health-check api testing started
+2023-06-05 02:07:58,477 : INFO : test_001_get_api_health_check : Status Code asserted successfully
+2023-06-05 02:07:58,478 : INFO : test_001_get_api_health_check : Response data
+2023-06-05 02:07:58,494 : INFO : test_001_get_api_health_check : Success Message asserted successfully
+2023-06-05 02:07:58,516 : INFO : test_002_get_api_health_check_negative : get /health-check api testing started for wrong api endpoint
+2023-06-05 02:07:58,857 : INFO : test_002_get_api_health_check_negative : Status Code asserted successfully
+2023-06-05 02:07:58,872 : INFO : test_002_get_api_health_check_negative : Success Message asserted successfully
+2023-06-05 02:07:58,893 : INFO : test_003_post_api_register_users : post /users/register api testing started
+2023-06-05 02:07:59,558 : INFO : test_003_post_api_register_users : Status Code asserted successfully
+2023-06-05 02:07:59,573 : INFO : test_003_post_api_register_users : Success Message asserted successfully
+2023-06-05 02:07:59,645 : INFO : test_003_post_api_register_users : Response data asserted successfully
+2023-06-05 02:07:59,666 : INFO : test_004_post_api_register_users_negative : post /users/register api testing started for registered user
+2023-06-05 02:08:00,323 : INFO : test_004_post_api_register_users_negative : Status Code asserted successfully
+2023-06-05 02:08:00,341 : INFO : test_004_post_api_register_users_negative : Success Message asserted successfully
+2023-06-05 02:08:00,361 : INFO : test_005_post_api_users_login : post /users/login api testing started
+2023-06-05 02:08:01,063 : INFO : test_005_post_api_users_login : Status Code asserted successfully
+2023-06-05 02:08:01,150 : INFO : test_005_post_api_users_login : Success Message asserted successfully
+2023-06-05 02:08:01,207 : INFO : test_005_post_api_users_login : Response data asserted successfully
+2023-06-05 02:08:01,237 : INFO : test_006_post_api_users_login_negative : post /users/login api testing started for invalid email and password
+2023-06-05 02:08:01,676 : INFO : test_006_post_api_users_login_negative : Status Code asserted successfully
+2023-06-05 02:08:01,701 : INFO : test_006_post_api_users_login_negative : Success Message asserted successfully
+2023-06-05 02:08:01,725 : INFO : test_007_get_api_users_profile : get /users/profile api testing started
+2023-06-05 02:08:02,391 : INFO : test_007_get_api_users_profile : Status Code asserted successfully
+2023-06-05 02:08:02,408 : INFO : test_007_get_api_users_profile : Success Message asserted successfully
+2023-06-05 02:08:02,462 : INFO : test_007_get_api_users_profile : Response data asserted successfully
+2023-06-05 02:08:02,484 : INFO : test_008_patch_api_users_profile : patch /users/profile api testing started
+2023-06-05 02:08:03,142 : INFO : test_008_patch_api_users_profile : Status Code asserted successfully
+2023-06-05 02:08:03,156 : INFO : test_008_patch_api_users_profile : Success Message asserted successfully
+2023-06-05 02:08:03,232 : INFO : test_008_patch_api_users_profile : Response data asserted successfully
+2023-06-05 02:08:03,254 : INFO : test_009_post_api_users_forgot_password : post /users/forgot-password api testing started
+2023-06-05 02:08:03,940 : INFO : test_009_post_api_users_forgot_password : Status Code asserted successfully
+2023-06-05 02:08:03,957 : INFO : test_009_post_api_users_forgot_password : Success Message asserted successfully
+2023-06-05 02:08:03,982 : INFO : test_010_post_api_users : post /users/change-password api testing started
+2023-06-05 02:08:04,833 : INFO : test_010_post_api_users : Status Code asserted successfully
+2023-06-05 02:08:04,873 : INFO : test_010_post_api_users : Success Message asserted successfully
+2023-06-05 02:08:05,030 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 02:08:05,723 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 02:08:05,741 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 02:08:05,775 : INFO : test_003_post_api_create_notes : Response data asserted successfully for 'Home' Category
+2023-06-05 02:08:05,803 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 02:08:05,803 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 02:08:06,444 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 02:08:06,444 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 02:08:06,506 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 02:08:06,506 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 02:08:06,543 : INFO : test_003_post_api_create_notes : Response data asserted successfully for 'Work' Category
+2023-06-05 02:08:06,543 : INFO : test_003_post_api_create_notes : Response data asserted successfully for 'Work' Category
+2023-06-05 02:08:06,567 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 02:08:06,567 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 02:08:06,567 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 02:08:07,203 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 02:08:07,203 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 02:08:07,203 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 02:08:07,225 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 02:08:07,225 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 02:08:07,225 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 02:08:07,258 : INFO : test_003_post_api_create_notes : Response data asserted successfully for 'Personal' Category
+2023-06-05 02:08:07,258 : INFO : test_003_post_api_create_notes : Response data asserted successfully for 'Personal' Category
+2023-06-05 02:08:07,258 : INFO : test_003_post_api_create_notes : Response data asserted successfully for 'Personal' Category
+2023-06-05 02:08:07,281 : INFO : test_004_get_api_get_notes : get /notes api testing started to get all the notes
+2023-06-05 02:08:07,823 : INFO : test_004_get_api_get_notes : Status Code asserted successfully
+2023-06-05 02:08:08,017 : INFO : test_004_get_api_get_notes : Response data asserted successfully
+2023-06-05 02:08:08,040 : INFO : test_004_get_api_get_notes : Success Message asserted successfully
+2023-06-05 02:08:08,067 : INFO : test_005_get_api_get_note_by_id : get /notes/id api testing started to get a note by id
+2023-06-05 02:08:08,611 : INFO : test_005_get_api_get_note_by_id : Status Code asserted successfully
+2023-06-05 02:08:08,632 : INFO : test_005_get_api_get_note_by_id : Success Message asserted successfully
+2023-06-05 02:08:08,670 : INFO : test_005_get_api_get_note_by_id : Response data asserted successfully
+2023-06-05 02:08:08,693 : INFO : test_006_put_api_edit_notes : put /notes/id api testing started to update a note by id
+2023-06-05 02:08:09,359 : INFO : test_006_put_api_edit_notes : Status Code asserted successfully
+2023-06-05 02:08:09,381 : INFO : test_006_put_api_edit_notes : Success Message asserted successfully
+2023-06-05 02:08:09,439 : INFO : test_006_put_api_edit_notes : Response data asserted successfully
+2023-06-05 02:08:09,465 : INFO : test_007_patch_api_users : patch /notes/id api testing started to update the completed status of a note
+2023-06-05 02:08:10,098 : INFO : test_007_patch_api_users : Status Code asserted successfully
+2023-06-05 02:08:10,125 : INFO : test_007_patch_api_users : Success Message asserted successfully
+2023-06-05 02:08:10,125 : INFO : test_007_patch_api_users : Response data asserted successfully
+2023-06-05 02:08:10,182 : INFO : test_008_delete_api_users : delete /notes/id api testing started to delete a note by id
+2023-06-05 02:08:10,831 : INFO : test_008_delete_api_users : Status Code asserted successfully
+2023-06-05 02:08:10,858 : INFO : test_008_delete_api_users : Success Message asserted successfully
+2023-06-05 02:08:10,887 : INFO : test_009_delete_api_logout_user_account : delete /users/logout api testing started to logout a user
+2023-06-05 02:08:11,533 : INFO : test_009_delete_api_logout_user_account : Status Code asserted successfully
+2023-06-05 02:08:11,557 : INFO : test_009_delete_api_logout_user_account : Success Message asserted successfully
+2023-06-05 02:08:12,446 : INFO : test_011_delete_api_delete_user_account : delete /users/delete-account api testing started to delete a user
+2023-06-05 02:08:13,295 : INFO : test_011_delete_api_delete_user_account : Status Code asserted successfully
+2023-06-05 02:08:13,316 : INFO : test_011_delete_api_delete_user_account : Success Message asserted successfully
+2023-06-05 02:09:25,167 : INFO : test_001_get_api_health_check : get /health-check api testing started
+2023-06-05 02:09:25,526 : INFO : test_001_get_api_health_check : Status Code asserted successfully
+2023-06-05 02:09:25,527 : INFO : test_001_get_api_health_check : Response data
+2023-06-05 02:09:25,542 : INFO : test_001_get_api_health_check : Success Message asserted successfully
+2023-06-05 02:09:25,563 : INFO : test_002_get_api_health_check_negative : get /health-check api testing started for wrong api endpoint
+2023-06-05 02:09:25,903 : INFO : test_002_get_api_health_check_negative : Status Code asserted successfully
+2023-06-05 02:09:25,919 : INFO : test_002_get_api_health_check_negative : Success Message asserted successfully
+2023-06-05 02:09:25,941 : INFO : test_003_post_api_register_users : post /users/register api testing started
+2023-06-05 02:09:26,611 : INFO : test_003_post_api_register_users : Status Code asserted successfully
+2023-06-05 02:09:26,627 : INFO : test_003_post_api_register_users : Success Message asserted successfully
+2023-06-05 02:09:26,702 : INFO : test_003_post_api_register_users : Response data asserted successfully
+2023-06-05 02:09:26,723 : INFO : test_004_post_api_register_users_negative : post /users/register api testing started for registered user
+2023-06-05 02:09:27,209 : INFO : test_004_post_api_register_users_negative : Status Code asserted successfully
+2023-06-05 02:09:27,225 : INFO : test_004_post_api_register_users_negative : Success Message asserted successfully
+2023-06-05 02:09:27,248 : INFO : test_005_post_api_users_login : post /users/login api testing started
+2023-06-05 02:09:27,954 : INFO : test_005_post_api_users_login : Status Code asserted successfully
+2023-06-05 02:09:28,013 : INFO : test_005_post_api_users_login : Success Message asserted successfully
+2023-06-05 02:09:28,054 : INFO : test_005_post_api_users_login : Response data asserted successfully
+2023-06-05 02:09:28,074 : INFO : test_006_post_api_users_login_negative : post /users/login api testing started for invalid email and password
+2023-06-05 02:09:28,507 : INFO : test_006_post_api_users_login_negative : Status Code asserted successfully
+2023-06-05 02:09:28,524 : INFO : test_006_post_api_users_login_negative : Success Message asserted successfully
+2023-06-05 02:09:28,545 : INFO : test_007_get_api_users_profile : get /users/profile api testing started
+2023-06-05 02:09:29,222 : INFO : test_007_get_api_users_profile : Status Code asserted successfully
+2023-06-05 02:09:29,237 : INFO : test_007_get_api_users_profile : Success Message asserted successfully
+2023-06-05 02:09:29,281 : INFO : test_007_get_api_users_profile : Response data asserted successfully
+2023-06-05 02:09:29,304 : INFO : test_008_patch_api_users_profile : patch /users/profile api testing started
+2023-06-05 02:09:29,985 : INFO : test_008_patch_api_users_profile : Status Code asserted successfully
+2023-06-05 02:09:29,999 : INFO : test_008_patch_api_users_profile : Success Message asserted successfully
+2023-06-05 02:09:30,071 : INFO : test_008_patch_api_users_profile : Response data asserted successfully
+2023-06-05 02:09:30,094 : INFO : test_009_post_api_users_forgot_password : post /users/forgot-password api testing started
+2023-06-05 02:09:30,815 : INFO : test_009_post_api_users_forgot_password : Status Code asserted successfully
+2023-06-05 02:09:30,831 : INFO : test_009_post_api_users_forgot_password : Success Message asserted successfully
+2023-06-05 02:09:30,855 : INFO : test_010_post_api_users : post /users/change-password api testing started
+2023-06-05 02:09:31,748 : INFO : test_010_post_api_users : Status Code asserted successfully
+2023-06-05 02:09:31,763 : INFO : test_010_post_api_users : Success Message asserted successfully
+2023-06-05 02:09:31,805 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 02:09:32,458 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 02:09:32,477 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 02:09:32,507 : INFO : test_003_post_api_create_notes : Response data asserted successfully for 'Home' Category
+2023-06-05 02:09:32,531 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 02:09:32,531 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 02:09:33,185 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 02:09:33,185 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 02:09:33,207 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 02:09:33,207 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 02:09:33,243 : INFO : test_003_post_api_create_notes : Response data asserted successfully for 'Work' Category
+2023-06-05 02:09:33,243 : INFO : test_003_post_api_create_notes : Response data asserted successfully for 'Work' Category
+2023-06-05 02:09:33,267 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 02:09:33,267 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 02:09:33,267 : INFO : test_003_post_api_create_notes : post /notes api testing started
+2023-06-05 02:09:33,934 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 02:09:33,934 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 02:09:33,934 : INFO : test_003_post_api_create_notes : Status Code asserted successfully
+2023-06-05 02:09:33,954 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 02:09:33,954 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 02:09:33,954 : INFO : test_003_post_api_create_notes : Success Message asserted successfully
+2023-06-05 02:09:33,988 : INFO : test_003_post_api_create_notes : Response data asserted successfully for 'Personal' Category
+2023-06-05 02:09:33,988 : INFO : test_003_post_api_create_notes : Response data asserted successfully for 'Personal' Category
+2023-06-05 02:09:33,988 : INFO : test_003_post_api_create_notes : Response data asserted successfully for 'Personal' Category
+2023-06-05 02:09:34,013 : INFO : test_004_get_api_get_notes : get /notes api testing started to get all the notes
+2023-06-05 02:09:34,563 : INFO : test_004_get_api_get_notes : Status Code asserted successfully
+2023-06-05 02:09:34,736 : INFO : test_004_get_api_get_notes : Response data asserted successfully
+2023-06-05 02:09:34,751 : INFO : test_004_get_api_get_notes : Success Message asserted successfully
+2023-06-05 02:09:34,774 : INFO : test_005_get_api_get_note_by_id : get /notes/id api testing started to get a note by id
+2023-06-05 02:09:35,300 : INFO : test_005_get_api_get_note_by_id : Status Code asserted successfully
+2023-06-05 02:09:35,315 : INFO : test_005_get_api_get_note_by_id : Success Message asserted successfully
+2023-06-05 02:09:35,346 : INFO : test_005_get_api_get_note_by_id : Response data asserted successfully
+2023-06-05 02:09:35,366 : INFO : test_006_put_api_edit_notes : put /notes/id api testing started to update a note by id
+2023-06-05 02:09:36,013 : INFO : test_006_put_api_edit_notes : Status Code asserted successfully
+2023-06-05 02:09:36,030 : INFO : test_006_put_api_edit_notes : Success Message asserted successfully
+2023-06-05 02:09:36,071 : INFO : test_006_put_api_edit_notes : Response data asserted successfully
+2023-06-05 02:09:36,093 : INFO : test_007_patch_api_users : patch /notes/id api testing started to update the completed status of a note
+2023-06-05 02:09:36,710 : INFO : test_007_patch_api_users : Status Code asserted successfully
+2023-06-05 02:09:36,725 : INFO : test_007_patch_api_users : Success Message asserted successfully
+2023-06-05 02:09:36,725 : INFO : test_007_patch_api_users : Response data asserted successfully
+2023-06-05 02:09:36,746 : INFO : test_008_delete_api_users : delete /notes/id api testing started to delete a note by id
+2023-06-05 02:09:37,356 : INFO : test_008_delete_api_users : Status Code asserted successfully
+2023-06-05 02:09:37,370 : INFO : test_008_delete_api_users : Success Message asserted successfully
+2023-06-05 02:09:37,391 : INFO : test_009_delete_api_logout_user_account : delete /users/logout api testing started to logout a user
+2023-06-05 02:09:37,999 : INFO : test_009_delete_api_logout_user_account : Status Code asserted successfully
+2023-06-05 02:09:38,015 : INFO : test_009_delete_api_logout_user_account : Success Message asserted successfully
+2023-06-05 02:09:38,818 : INFO : test_011_delete_api_delete_user_account : delete /users/delete-account api testing started to delete a user
+2023-06-05 02:09:39,606 : INFO : test_011_delete_api_delete_user_account : Status Code asserted successfully
+2023-06-05 02:09:39,620 : INFO : test_011_delete_api_delete_user_account : Success Message asserted successfully

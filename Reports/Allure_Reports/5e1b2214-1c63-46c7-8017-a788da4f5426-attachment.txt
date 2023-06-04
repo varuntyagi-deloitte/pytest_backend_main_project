@@ -1,0 +1,3 @@
+[32mINFO    [0m test_006_post_api_users_login_negative:test_001_users_api.py:85 post /users/login api testing started for invalid email and password
+[32mINFO    [0m test_006_post_api_users_login_negative:test_001_users_api.py:89 Status Code asserted successfully
+[32mINFO    [0m test_006_post_api_users_login_negative:test_001_users_api.py:92 Success Message asserted successfully

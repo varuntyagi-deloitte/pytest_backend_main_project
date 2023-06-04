@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>report.html</title>
+    <link href="assets/style.css" rel="stylesheet" type="text/css"/></head>
+  <body onLoad="init()">
+    <script>/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this file,
+ * You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+
+function toArray(iter) {
+    if (iter === null) {
+        return null;
+    }
+    return Array.prototype.slice.call(iter);
+}
+
+function find(selector, elem) { // eslint-disable-line no-redeclare
+    if (!elem) {
+        elem = document;
+    }
+    return elem.querySelector(selector);
+}
+
+function findAll(selector, elem) {
+    if (!elem) {
+        elem = document;
+    }
+    return toArray(elem.querySelectorAll(selector));
+}
+
+function sortColumn(elem) {
+    toggleSortStates(elem);
+    const colIndex = toArray(elem.parentNode.childNodes).indexOf(elem);
+    let key;
+    if (elem.classList.contains('result')) {
+        key = keyResult;
+    } else if (elem.classList.contains('links')) {
+        key = keyLink;
+    } else {
+        key = keyAlpha;
+    }
+    sortTable(elem, key(colIndex));
+}
+
+function showAllExtras() { // eslint-disable-line no-unused-vars
+    findAll('.col-result').forEach(showExtras);
+}
+
+function hideAllExtras() { // eslint-disable-line no-unused-vars
+    findAll('.col-result').forEach(hideExtras);
+}
+
+function showExtras(colresultElem) {
+    const extras = colresultElem.parentNode.nextElementSibling;
+    const expandcollapse = colresultElem.firstElementChild;
+    extras.classList.remove('collapsed');
+    expandcollapse.classList.remove('expander');
+    expandcollapse.classList.add('collapser');
+}
+
+function hideExtras(colresultElem) {
+    const extras = colresultElem.parentNode.nextElementSibling;
+    const expandcollapse = colresultElem.firstElementChild;
+    extras.classList.add('collapsed');
+    expandcollapse.classList.remove('collapser');
+    expandcollapse.classList.add('expander');
+}
+
+function showFilters() {
+    let visibleString = getQueryParameter('visible') || 'all';
+    visibleString = visibleString.toLowerCase();
+    const checkedItems = visibleString.split(',');
+
+    const filterItems = document.getElementsByClassName('filter');
+    for (let i = 0; i < filterItems.length; i++) {
+        filterItems[i].hidden = false;
+
+        if (visibleString != 'all') {
+            filterItems[i].checked = checkedItems.includes(filterItems[i].getAttribute('data-test-result'));
+            filterTable(filterItems[i]);
+        }
+    }
+}
+
+function addCollapse() {
+    // Add links for show/hide all
+    const resulttable = find('table#results-table');
+    const showhideall = document.createElement('p');
+    showhideall.innerHTML = '<a href="javascript:showAllExtras()">Show all details</a> / ' +
+                            '<a href="javascript:hideAllExtras()">Hide all details</a>';
+    resulttable.parentElement.insertBefore(showhideall, resulttable);
+
+    // Add show/hide link to each result
+    findAll('.col-result').forEach(function(elem) {
+        const collapsed = getQueryParameter('collapsed') || 'Passed';
+        const extras = elem.parentNode.nextElementSibling;
+        const expandcollapse = document.createElement('span');
+        if (extras.classList.contains('collapsed')) {
+            expandcollapse.classList.add('expander');
+        } else if (collapsed.includes(elem.innerHTML)) {
+            extras.classList.add('collapsed');
+            expandcollapse.classList.add('expander');
+        } else {
+            expandcollapse.classList.add('collapser');
+        }
+        elem.appendChild(expandcollapse);
+
+        elem.addEventListener('click', function(event) {
+            if (event.currentTarget.parentNode.nextElementSibling.classList.contains('collapsed')) {
+                showExtras(event.currentTarget);
+            } else {
+                hideExtras(event.currentTarget);
+            }
+        });
+    });
+}
+
+function getQueryParameter(name) {
+    const match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+    return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+}
+
+function init () { // eslint-disable-line no-unused-vars
+    resetSortHeaders();
+
+    addCollapse();
+
+    showFilters();
+
+    sortColumn(find('.initial-sort'));
+
+    findAll('.sortable').forEach(function(elem) {
+        elem.addEventListener('click',
+            function() {
+                sortColumn(elem);
+            }, false);
+    });
+}
+
+function sortTable(clicked, keyFunc) {
+    const rows = findAll('.results-table-row');
+    const reversed = !clicked.classList.contains('asc');
+    const sortedRows = sort(rows, keyFunc, reversed);
+    /* Whole table is removed here because browsers acts much slower
+     * when appending existing elements.
+     */
+    const thead = document.getElementById('results-table-head');
+    document.getElementById('results-table').remove();
+    const parent = document.createElement('table');
+    parent.id = 'results-table';
+    parent.appendChild(thead);
+    sortedRows.forEach(function(elem) {
+        parent.appendChild(elem);
+    });
+    document.getElementsByTagName('BODY')[0].appendChild(parent);
+}
+
+function sort(items, keyFunc, reversed) {
+    const sortArray = items.map(function(item, i) {
+        return [keyFunc(item), i];
+    });
+
+    sortArray.sort(function(a, b) {
+        const keyA = a[0];
+        const keyB = b[0];
+
+        if (keyA == keyB) return 0;
+
+        if (reversed) {
+            return keyA < keyB ? 1 : -1;
+        } else {
+            return keyA > keyB ? 1 : -1;
+        }
+    });
+
+    return sortArray.map(function(item) {
+        const index = item[1];
+        return items[index];
+    });
+}
+
+function keyAlpha(colIndex) {
+    return function(elem) {
+        return elem.childNodes[1].childNodes[colIndex].firstChild.data.toLowerCase();
+    };
+}
+
+function keyLink(colIndex) {
+    return function(elem) {
+        const dataCell = elem.childNodes[1].childNodes[colIndex].firstChild;
+        return dataCell == null ? '' : dataCell.innerText.toLowerCase();
+    };
+}
+
+function keyResult(colIndex) {
+    return function(elem) {
+        const strings = ['Error', 'Failed', 'Rerun', 'XFailed', 'XPassed',
+            'Skipped', 'Passed'];
+        return strings.indexOf(elem.childNodes[1].childNodes[colIndex].firstChild.data);
+    };
+}
+
+function resetSortHeaders() {
+    findAll('.sort-icon').forEach(function(elem) {
+        elem.parentNode.removeChild(elem);
+    });
+    findAll('.sortable').forEach(function(elem) {
+        const icon = document.createElement('div');
+        icon.className = 'sort-icon';
+        icon.textContent = 'vvv';
+        elem.insertBefore(icon, elem.firstChild);
+        elem.classList.remove('desc', 'active');
+        elem.classList.add('asc', 'inactive');
+    });
+}
+
+function toggleSortStates(elem) {
+    //if active, toggle between asc and desc
+    if (elem.classList.contains('active')) {
+        elem.classList.toggle('asc');
+        elem.classList.toggle('desc');
+    }
+
+    //if inactive, reset all other functions and add ascending active
+    if (elem.classList.contains('inactive')) {
+        resetSortHeaders();
+        elem.classList.remove('inactive');
+        elem.classList.add('active');
+    }
+}
+
+function isAllRowsHidden(value) {
+    return value.hidden == false;
+}
+
+function filterTable(elem) { // eslint-disable-line no-unused-vars
+    const outcomeAtt = 'data-test-result';
+    const outcome = elem.getAttribute(outcomeAtt);
+    const classOutcome = outcome + ' results-table-row';
+    const outcomeRows = document.getElementsByClassName(classOutcome);
+
+    for(let i = 0; i < outcomeRows.length; i++){
+        outcomeRows[i].hidden = !elem.checked;
+    }
+
+    const rows = findAll('.results-table-row').filter(isAllRowsHidden);
+    const allRowsHidden = rows.length == 0 ? true : false;
+    const notFoundMessage = document.getElementById('not-found-message');
+    notFoundMessage.hidden = !allRowsHidden;
+}
+</script>
+    <h1>report.html</h1>
+    <p>Report generated on 05-Jun-2023 at 02:09:39 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.2.0</p>
+    <h2>Summary</h2>
+    <p>23 tests ran in 15.70 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">23 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <h2>Results</h2>
+    <table id="results-table">
+      <thead id="results-table-head">
+        <tr>
+          <th class="sortable result initial-sort" col="result">Result</th>
+          <th class="sortable" col="name">Test</th>
+          <th class="sortable" col="duration">Duration</th>
+          <th class="sortable links" col="links">Links</th></tr>
+        <tr hidden="true" id="not-found-message">
+          <th colspan="4">No results found. Try to check the filters</th></tr></thead>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Tests/test_001_users_api.py::TestVarunUsersAPI::test_log</td>
+          <td class="col-duration">0.36</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>Started TestCase test_log.
+<br/> ----------------------------Captured stdout teardown---------------------------- <br/>Completed TestCase test_log.
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Tests/test_001_users_api.py::TestVarunUsersAPI::test_001_get_api_health_check</td>
+          <td class="col-duration">0.39</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>Started TestCase test_001_get_api_health_check.
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     test_001_get_api_health_check:test_001_users_api.py:18 get /health-check api testing started
+INFO     test_001_get_api_health_check:test_001_users_api.py:21 Status Code asserted successfully
+INFO     test_001_get_api_health_check:test_001_users_api.py:23 Response data
+INFO     test_001_get_api_health_check:test_001_users_api.py:25 Success Message asserted successfully<br/> ----------------------------Captured stdout teardown---------------------------- <br/>Completed TestCase test_001_get_api_health_check.
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Tests/test_001_users_api.py::TestVarunUsersAPI::test_002_get_api_health_check_negative</td>
+          <td class="col-duration">0.37</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>Started TestCase test_002_get_api_health_check_negative.
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     test_002_get_api_health_check_negative:test_001_users_api.py:31 get /health-check api testing started for wrong api endpoint
+INFO     test_002_get_api_health_check_negative:test_001_users_api.py:34 Status Code asserted successfully
+INFO     test_002_get_api_health_check_negative:test_001_users_api.py:37 Success Message asserted successfully<br/> ----------------------------Captured stdout teardown---------------------------- <br/>Completed TestCase test_002_get_api_health_check_negative.
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Tests/test_001_users_api.py::TestVarunUsersAPI::test_003_post_api_register_users</td>
+          <td class="col-duration">0.78</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>Started TestCase test_003_post_api_register_users.
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     test_003_post_api_register_users:test_001_users_api.py:42 post /users/register api testing started
+INFO     test_003_post_api_register_users:test_001_users_api.py:45 Status Code asserted successfully
+INFO     test_003_post_api_register_users:test_001_users_api.py:48 Success Message asserted successfully
+INFO     test_003_post_api_register_users:test_001_users_api.py:52 Response data asserted successfully<br/> ----------------------------Captured stdout teardown---------------------------- <br/>Completed TestCase test_003_post_api_register_users.
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Tests/test_001_users_api.py::TestVarunUsersAPI::test_004_post_api_register_users_negative</td>
+          <td class="col-duration">0.52</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>Started TestCase test_004_post_api_register_users_negative.
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     test_004_post_api_register_users_negative:test_001_users_api.py:57 post /users/register api testing started for registered user
+INFO     test_004_post_api_register_users_negative:test_001_users_api.py:61 Status Code asserted successfully
+INFO     test_004_post_api_register_users_negative:test_001_users_api.py:64 Success Message asserted successfully<br/> ----------------------------Captured stdout teardown---------------------------- <br/>Completed TestCase test_004_post_api_register_users_negative.
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Tests/test_001_users_api.py::TestVarunUsersAPI::test_005_post_api_users_login</td>
+          <td class="col-duration">0.82</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>Started TestCase test_005_post_api_users_login.
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     test_005_post_api_users_login:test_001_users_api.py:69 post /users/login api testing started
+INFO     test_005_post_api_users_login:test_001_users_api.py:72 Status Code asserted successfully
+INFO     test_005_post_api_users_login:test_001_users_api.py:76 Success Message asserted successfully
+INFO     test_005_post_api_users_login:test_001_users_api.py:80 Response data asserted successfully<br/> ----------------------------Captured stdout teardown---------------------------- <br/>Completed TestCase test_005_post_api_users_login.
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Tests/test_001_users_api.py::TestVarunUsersAPI::test_006_post_api_users_login_negative</td>
+          <td class="col-duration">0.46</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>Started TestCase test_006_post_api_users_login_negative.
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     test_006_post_api_users_login_negative:test_001_users_api.py:85 post /users/login api testing started for invalid email and password
+INFO     test_006_post_api_users_login_negative:test_001_users_api.py:89 Status Code asserted successfully
+INFO     test_006_post_api_users_login_negative:test_001_users_api.py:92 Success Message asserted successfully<br/> ----------------------------Captured stdout teardown---------------------------- <br/>Completed TestCase test_006_post_api_users_login_negative.
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Tests/test_001_users_api.py::TestVarunUsersAPI::test_007_get_api_users_profile</td>
+          <td class="col-duration">0.75</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>Started TestCase test_007_get_api_users_profile.
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     test_007_get_api_users_profile:test_001_users_api.py:97 get /users/profile api testing started
+INFO     test_007_get_api_users_profile:test_001_users_api.py:103 Status Code asserted successfully
+INFO     test_007_get_api_users_profile:test_001_users_api.py:105 Success Message asserted successfully
+INFO     test_007_get_api_users_profile:test_001_users_api.py:109 Response data asserted successfully<br/> ----------------------------Captured stdout teardown---------------------------- <br/>Completed TestCase test_007_get_api_users_profile.
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Tests/test_001_users_api.py::TestVarunUsersAPI::test_008_patch_api_users_profile</td>
+          <td class="col-duration">0.78</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>Started TestCase test_008_patch_api_users_profile.
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     test_008_patch_api_users_profile:test_001_users_api.py:114 patch /users/profile api testing started
+INFO     test_008_patch_api_users_profile:test_001_users_api.py:120 Status Code asserted successfully
+INFO     test_008_patch_api_users_profile:test_001_users_api.py:122 Success Message asserted successfully
+INFO     test_008_patch_api_users_profile:test_001_users_api.py:128 Response data asserted successfully<br/> ----------------------------Captured stdout teardown---------------------------- <br/>Completed TestCase test_008_patch_api_users_profile.
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Tests/test_001_users_api.py::TestVarunUsersAPI::test_009_post_api_users_forgot_password</td>
+          <td class="col-duration">0.75</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>Started TestCase test_009_post_api_users_forgot_password.
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     test_009_post_api_users_forgot_password:test_001_users_api.py:133 post /users/forgot-password api testing started
+INFO     test_009_post_api_users_forgot_password:test_001_users_api.py:138 Status Code asserted successfully
+INFO     test_009_post_api_users_forgot_password:test_001_users_api.py:142 Success Message asserted successfully<br/> ----------------------------Captured stdout teardown---------------------------- <br/>Completed TestCase test_009_post_api_users_forgot_password.
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Tests/test_001_users_api.py::TestVarunUsersAPI::test_010_post_api_users</td>
+          <td class="col-duration">0.93</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>Started TestCase test_010_post_api_users.
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     test_010_post_api_users:test_001_users_api.py:147 post /users/change-password api testing started
+INFO     test_010_post_api_users:test_001_users_api.py:153 Status Code asserted successfully
+INFO     test_010_post_api_users:test_001_users_api.py:156 Success Message asserted successfully<br/> ----------------------------Captured stdout teardown---------------------------- <br/>Completed TestCase test_010_post_api_users.
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Tests/test_002_notes_api.py::TestVarunNotesAPI::test_log</td>
+          <td class="col-duration">0.01</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>Started TestCase test_log.
+<br/> ----------------------------Captured stdout teardown---------------------------- <br/>Completed TestCase test_log.
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Tests/test_002_notes_api.py::TestVarunNotesAPI::test_003_post_api_create_notes[Home]</td>
+          <td class="col-duration">0.72</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>Started TestCase test_003_post_api_create_notes.
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     test_003_post_api_create_notes:test_002_notes_api.py:21 post /notes api testing started
+INFO     test_003_post_api_create_notes:test_002_notes_api.py:26 Status Code asserted successfully
+INFO     test_003_post_api_create_notes:test_002_notes_api.py:29 Success Message asserted successfully
+INFO     test_003_post_api_create_notes:test_002_notes_api.py:33 Response data asserted successfully for &#x27;Home&#x27; Category<br/> ----------------------------Captured stdout teardown---------------------------- <br/>Completed TestCase test_003_post_api_create_notes.
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Tests/test_002_notes_api.py::TestVarunNotesAPI::test_003_post_api_create_notes[Work]</td>
+          <td class="col-duration">0.73</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>Started TestCase test_003_post_api_create_notes.
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     test_003_post_api_create_notes:test_002_notes_api.py:21 post /notes api testing started
+INFO     test_003_post_api_create_notes:test_002_notes_api.py:26 Status Code asserted successfully
+INFO     test_003_post_api_create_notes:test_002_notes_api.py:29 Success Message asserted successfully
+INFO     test_003_post_api_create_notes:test_002_notes_api.py:33 Response data asserted successfully for &#x27;Work&#x27; Category<br/> ----------------------------Captured stdout teardown---------------------------- <br/>Completed TestCase test_003_post_api_create_notes.
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Tests/test_002_notes_api.py::TestVarunNotesAPI::test_003_post_api_create_notes[Personal]</td>
+          <td class="col-duration">0.74</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>Started TestCase test_003_post_api_create_notes.
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     test_003_post_api_create_notes:test_002_notes_api.py:21 post /notes api testing started
+INFO     test_003_post_api_create_notes:test_002_notes_api.py:26 Status Code asserted successfully
+INFO     test_003_post_api_create_notes:test_002_notes_api.py:29 Success Message asserted successfully
+INFO     test_003_post_api_create_notes:test_002_notes_api.py:33 Response data asserted successfully for &#x27;Personal&#x27; Category<br/> ----------------------------Captured stdout teardown---------------------------- <br/>Completed TestCase test_003_post_api_create_notes.
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Tests/test_002_notes_api.py::TestVarunNotesAPI::test_004_get_api_get_notes</td>
+          <td class="col-duration">0.76</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>Started TestCase test_004_get_api_get_notes.
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     test_004_get_api_get_notes:test_002_notes_api.py:38 get /notes api testing started to get all the notes
+INFO     test_004_get_api_get_notes:test_002_notes_api.py:42 Status Code asserted successfully
+INFO     test_004_get_api_get_notes:test_002_notes_api.py:52 Response data asserted successfully
+INFO     test_004_get_api_get_notes:test_002_notes_api.py:54 Success Message asserted successfully<br/> ----------------------------Captured stdout teardown---------------------------- <br/>Completed TestCase test_004_get_api_get_notes.
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Tests/test_002_notes_api.py::TestVarunNotesAPI::test_005_get_api_get_note_by_id</td>
+          <td class="col-duration">0.59</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>Started TestCase test_005_get_api_get_note_by_id.
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     test_005_get_api_get_note_by_id:test_002_notes_api.py:60 get /notes/id api testing started to get a note by id
+INFO     test_005_get_api_get_note_by_id:test_002_notes_api.py:65 Status Code asserted successfully
+INFO     test_005_get_api_get_note_by_id:test_002_notes_api.py:68 Success Message asserted successfully
+INFO     test_005_get_api_get_note_by_id:test_002_notes_api.py:71 Response data asserted successfully<br/> ----------------------------Captured stdout teardown---------------------------- <br/>Completed TestCase test_005_get_api_get_note_by_id.
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Tests/test_002_notes_api.py::TestVarunNotesAPI::test_006_put_api_edit_notes</td>
+          <td class="col-duration">0.72</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>Started TestCase test_006_put_api_edit_notes.
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     test_006_put_api_edit_notes:test_002_notes_api.py:76 put /notes/id api testing started to update a note by id
+INFO     test_006_put_api_edit_notes:test_002_notes_api.py:81 Status Code asserted successfully
+INFO     test_006_put_api_edit_notes:test_002_notes_api.py:84 Success Message asserted successfully
+INFO     test_006_put_api_edit_notes:test_002_notes_api.py:89 Response data asserted successfully<br/> ----------------------------Captured stdout teardown---------------------------- <br/>Completed TestCase test_006_put_api_edit_notes.
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Tests/test_002_notes_api.py::TestVarunNotesAPI::test_007_patch_api_users</td>
+          <td class="col-duration">0.65</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>Started TestCase test_007_patch_api_users.
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     test_007_patch_api_users:test_002_notes_api.py:94 patch /notes/id api testing started to update the completed status of a note
+INFO     test_007_patch_api_users:test_002_notes_api.py:99 Status Code asserted successfully
+INFO     test_007_patch_api_users:test_002_notes_api.py:102 Success Message asserted successfully
+INFO     test_007_patch_api_users:test_002_notes_api.py:104 Response data asserted successfully<br/> ----------------------------Captured stdout teardown---------------------------- <br/>Completed TestCase test_007_patch_api_users.
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Tests/test_002_notes_api.py::TestVarunNotesAPI::test_008_delete_api_users</td>
+          <td class="col-duration">0.64</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>Started TestCase test_008_delete_api_users.
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     test_008_delete_api_users:test_002_notes_api.py:109 delete /notes/id api testing started to delete a note by id
+INFO     test_008_delete_api_users:test_002_notes_api.py:114 Status Code asserted successfully
+INFO     test_008_delete_api_users:test_002_notes_api.py:117 Success Message asserted successfully<br/> ----------------------------Captured stdout teardown---------------------------- <br/>Completed TestCase test_008_delete_api_users.
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Tests/test_002_notes_api.py::TestVarunNotesAPI::test_009_delete_api_logout_user_account</td>
+          <td class="col-duration">0.64</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>Started TestCase test_009_delete_api_logout_user_account.
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     test_009_delete_api_logout_user_account:test_002_notes_api.py:122 delete /users/logout api testing started to logout a user
+INFO     test_009_delete_api_logout_user_account:test_002_notes_api.py:127 Status Code asserted successfully
+INFO     test_009_delete_api_logout_user_account:test_002_notes_api.py:130 Success Message asserted successfully<br/> ----------------------------Captured stdout teardown---------------------------- <br/>Completed TestCase test_009_delete_api_logout_user_account.
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Tests/test_002_notes_api.py::TestVarunNotesAPI::test_010_post_api_user_login</td>
+          <td class="col-duration">0.78</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>Started TestCase test_010_post_api_user_login.
+<br/> ----------------------------Captured stdout teardown---------------------------- <br/>Completed TestCase test_010_post_api_user_login.
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Tests/test_002_notes_api.py::TestVarunNotesAPI::test_011_delete_api_delete_user_account</td>
+          <td class="col-duration">0.82</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>Started TestCase test_011_delete_api_delete_user_account.
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     test_011_delete_api_delete_user_account:test_002_notes_api.py:142 delete /users/delete-account api testing started to delete a user
+INFO     test_011_delete_api_delete_user_account:test_002_notes_api.py:146 Status Code asserted successfully
+INFO     test_011_delete_api_delete_user_account:test_002_notes_api.py:149 Success Message asserted successfully<br/> ----------------------------Captured stdout teardown---------------------------- <br/>Completed TestCase test_011_delete_api_delete_user_account.
+<br/></div></td></tr></tbody></table></body></html>

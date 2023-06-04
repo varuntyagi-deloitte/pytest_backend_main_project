@@ -1,0 +1,3 @@
+[32mINFO    [0m test_008_delete_api_users:test_002_notes_api.py:109 delete /notes/id api testing started to delete a note by id
+[32mINFO    [0m test_008_delete_api_users:test_002_notes_api.py:114 Status Code asserted successfully
+[32mINFO    [0m test_008_delete_api_users:test_002_notes_api.py:117 Success Message asserted successfully

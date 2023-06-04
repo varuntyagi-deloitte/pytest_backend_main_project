@@ -1,0 +1,3 @@
+[32mINFO    [0m test_004_post_api_register_users_negative:test_001_users_api.py:57 post /users/register api testing started for registered user
+[32mINFO    [0m test_004_post_api_register_users_negative:test_001_users_api.py:61 Status Code asserted successfully
+[32mINFO    [0m test_004_post_api_register_users_negative:test_001_users_api.py:64 Success Message asserted successfully

@@ -1,0 +1,4 @@
+[32mINFO    [0m test_006_put_api_edit_notes:test_002_notes_api.py:76 put /notes/id api testing started to update a note by id
+[32mINFO    [0m test_006_put_api_edit_notes:test_002_notes_api.py:81 Status Code asserted successfully
+[32mINFO    [0m test_006_put_api_edit_notes:test_002_notes_api.py:84 Success Message asserted successfully
+[32mINFO    [0m test_006_put_api_edit_notes:test_002_notes_api.py:89 Response data asserted successfully

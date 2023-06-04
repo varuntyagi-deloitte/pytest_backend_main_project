@@ -1,0 +1,4 @@
+[32mINFO    [0m test_007_get_api_users_profile:test_001_users_api.py:97 get /users/profile api testing started
+[32mINFO    [0m test_007_get_api_users_profile:test_001_users_api.py:103 Status Code asserted successfully
+[32mINFO    [0m test_007_get_api_users_profile:test_001_users_api.py:105 Success Message asserted successfully
+[32mINFO    [0m test_007_get_api_users_profile:test_001_users_api.py:109 Response data asserted successfully

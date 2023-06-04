@@ -1,0 +1,4 @@
+[32mINFO    [0m test_001_get_api_health_check:test_001_users_api.py:18 get /health-check api testing started
+[32mINFO    [0m test_001_get_api_health_check:test_001_users_api.py:21 Status Code asserted successfully
+[32mINFO    [0m test_001_get_api_health_check:test_001_users_api.py:23 Response data
+[32mINFO    [0m test_001_get_api_health_check:test_001_users_api.py:25 Success Message asserted successfully

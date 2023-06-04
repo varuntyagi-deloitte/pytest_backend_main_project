@@ -1,0 +1,3 @@
+[32mINFO    [0m test_011_delete_api_delete_user_account:test_002_notes_api.py:142 delete /users/delete-account api testing started to delete a user
+[32mINFO    [0m test_011_delete_api_delete_user_account:test_002_notes_api.py:146 Status Code asserted successfully
+[32mINFO    [0m test_011_delete_api_delete_user_account:test_002_notes_api.py:149 Success Message asserted successfully

@@ -1,0 +1,3 @@
+[32mINFO    [0m test_002_get_api_health_check_negative:test_001_users_api.py:31 get /health-check api testing started for wrong api endpoint
+[32mINFO    [0m test_002_get_api_health_check_negative:test_001_users_api.py:34 Status Code asserted successfully
+[32mINFO    [0m test_002_get_api_health_check_negative:test_001_users_api.py:37 Success Message asserted successfully

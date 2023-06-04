@@ -1,0 +1,3 @@
+[32mINFO    [0m test_010_post_api_users:test_001_users_api.py:147 post /users/change-password api testing started
+[32mINFO    [0m test_010_post_api_users:test_001_users_api.py:153 Status Code asserted successfully
+[32mINFO    [0m test_010_post_api_users:test_001_users_api.py:156 Success Message asserted successfully

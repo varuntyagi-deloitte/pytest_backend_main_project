@@ -1,0 +1,4 @@
+[32mINFO    [0m test_005_get_api_get_note_by_id:test_002_notes_api.py:60 get /notes/id api testing started to get a note by id
+[32mINFO    [0m test_005_get_api_get_note_by_id:test_002_notes_api.py:65 Status Code asserted successfully
+[32mINFO    [0m test_005_get_api_get_note_by_id:test_002_notes_api.py:68 Success Message asserted successfully
+[32mINFO    [0m test_005_get_api_get_note_by_id:test_002_notes_api.py:71 Response data asserted successfully

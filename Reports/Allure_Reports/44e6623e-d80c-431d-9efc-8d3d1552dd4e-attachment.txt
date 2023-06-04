@@ -1,0 +1,4 @@
+[32mINFO    [0m test_008_patch_api_users_profile:test_001_users_api.py:114 patch /users/profile api testing started
+[32mINFO    [0m test_008_patch_api_users_profile:test_001_users_api.py:120 Status Code asserted successfully
+[32mINFO    [0m test_008_patch_api_users_profile:test_001_users_api.py:122 Success Message asserted successfully
+[32mINFO    [0m test_008_patch_api_users_profile:test_001_users_api.py:128 Response data asserted successfully

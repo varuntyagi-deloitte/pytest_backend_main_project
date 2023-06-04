@@ -1,0 +1,2 @@
+Started TestCase test_log.
+Completed TestCase test_log.

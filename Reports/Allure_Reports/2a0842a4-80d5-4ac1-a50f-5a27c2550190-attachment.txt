@@ -1,0 +1,2 @@
+Started TestCase test_008_delete_api_users.
+Completed TestCase test_008_delete_api_users.

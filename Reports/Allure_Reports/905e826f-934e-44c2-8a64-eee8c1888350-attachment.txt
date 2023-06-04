@@ -1,0 +1,2 @@
+Started TestCase test_009_delete_api_logout_user_account.
+Completed TestCase test_009_delete_api_logout_user_account.

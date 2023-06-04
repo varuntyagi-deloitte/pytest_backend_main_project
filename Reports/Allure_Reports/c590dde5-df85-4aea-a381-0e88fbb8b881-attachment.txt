@@ -1,0 +1,2 @@
+Started TestCase test_004_post_api_register_users_negative.
+Completed TestCase test_004_post_api_register_users_negative.

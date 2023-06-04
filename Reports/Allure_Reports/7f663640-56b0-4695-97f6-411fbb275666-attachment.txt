@@ -1,0 +1,4 @@
+[32mINFO    [0m test_003_post_api_create_notes:test_002_notes_api.py:21 post /notes api testing started
+[32mINFO    [0m test_003_post_api_create_notes:test_002_notes_api.py:26 Status Code asserted successfully
+[32mINFO    [0m test_003_post_api_create_notes:test_002_notes_api.py:29 Success Message asserted successfully
+[32mINFO    [0m test_003_post_api_create_notes:test_002_notes_api.py:33 Response data asserted successfully for 'Work' Category

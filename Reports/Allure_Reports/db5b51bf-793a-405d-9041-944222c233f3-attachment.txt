@@ -1,0 +1,4 @@
+[32mINFO    [0m test_007_patch_api_users:test_002_notes_api.py:94 patch /notes/id api testing started to update the completed status of a note
+[32mINFO    [0m test_007_patch_api_users:test_002_notes_api.py:99 Status Code asserted successfully
+[32mINFO    [0m test_007_patch_api_users:test_002_notes_api.py:102 Success Message asserted successfully
+[32mINFO    [0m test_007_patch_api_users:test_002_notes_api.py:104 Response data asserted successfully
